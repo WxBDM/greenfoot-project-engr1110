@@ -1,6 +1,5 @@
 # ENGR 1110 Group Project
 
-<hr>
 <h2>Overview</h2>
 This project uses Greenfoot, an IDE using Java to develop two-dimensional graphical applications.
 <h4>Class Overview</h4>
