@@ -21,6 +21,7 @@ target2.height=50
 target1.x=0
 class.Ship.image=Ship.png
 dependency1.to=Ship
+<<<<<<< HEAD
 target3.height=50
 editor.fx.0.height=735
 target1.showInterface=false
@@ -30,6 +31,24 @@ editor.fx.0.width=813
 class.MyWorld.image=space1.jpg
 target3.name=MyWorld
 target2.typeParameters=
+=======
+dependency1.type=UsesDependency
+editor.fx.0.height=465
+editor.fx.0.width=813
+editor.fx.0.x=265
+editor.fx.0.y=42
+mainWindow.height=1249
+mainWindow.width=2261
+mainWindow.x=345
+mainWindow.y=89
+package.numDependencies=1
+package.numTargets=2
+project.charset=UTF-8
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+>>>>>>> 133a516fc9dc7e12d189dc93dc64520b82eca008
 readme.y=10
 readme.x=10
 mainWindow.width=1440
