@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Greenfoot properties
 #Tue Oct 30 15:00:25 CDT 2018
 readme.name=@README
@@ -8,18 +9,15 @@ class.Ship.superclass=greenfoot.Actor
 target3.y=0
 target3.x=0
 target1.type=ClassTarget
+=======
+#Greenfoot project file
+class.Bullet.image=bullet.png
+class.Bullet.superclass=greenfoot.Actor
+class.MyWorld.image=space1.jpg
+>>>>>>> f18a6f5f547017dfe0c6813c58c59883cac7f642
 class.MyWorld.superclass=greenfoot.World
-target3.type=ClassTarget
-target2.y=0
-target2.x=0
-package.numTargets=3
-target1.height=50
-dependency2.type=UsesDependency
-class.Enemies.image=robot.png
-target1.y=0
-target2.height=50
-target1.x=0
 class.Ship.image=Ship.png
+<<<<<<< HEAD
 dependency1.to=Ship
 target3.height=50
 editor.fx.0.height=735
@@ -45,12 +43,57 @@ editor.fx.0.y=112
 editor.fx.0.x=309
 readme.width=47
 target3.showInterface=false
-target2.type=ClassTarget
-world.lastInstantiated=MyWorld
+=======
+class.Ship.superclass=greenfoot.Actor
+dependency1.from=Ship
+dependency1.to=Bullet
 dependency1.type=UsesDependency
-version=3.0.0
-package.numDependencies=2
+dependency2.from=MyWorld
+dependency2.to=Ship
+dependency2.type=UsesDependency
+dependency3.from=MyWorld
+dependency3.to=Bullet
+dependency3.type=UsesDependency
+editor.fx.0.height=465
+editor.fx.0.width=813
+editor.fx.0.x=28
+editor.fx.0.y=208
+mainWindow.height=1249
+mainWindow.width=2261
+mainWindow.x=345
+mainWindow.y=89
+package.numDependencies=3
+package.numTargets=3
 project.charset=UTF-8
 readme.height=58
-dependency2.to=Enemies
-class.Enemies.superclass=greenfoot.Actor
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
+target1.height=50
+target1.name=Bullet
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=80
+target1.x=0
+target1.y=0
+target2.height=50
+target2.name=Ship
+target2.showInterface=false
+>>>>>>> f18a6f5f547017dfe0c6813c58c59883cac7f642
+target2.type=ClassTarget
+target2.typeParameters=
+target2.width=80
+target2.x=0
+target2.y=0
+target3.height=50
+target3.name=MyWorld
+target3.showInterface=false
+target3.type=ClassTarget
+target3.typeParameters=
+target3.width=80
+target3.x=0
+target3.y=0
+version=3.0.0
+world.lastInstantiated=MyWorld

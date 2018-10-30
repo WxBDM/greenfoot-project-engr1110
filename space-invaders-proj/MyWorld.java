@@ -18,6 +18,12 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
 
         super(800, 600, 1);
+        addObject(new Ship(), 400, 550);
+        addObject(new Bullet(), 400, 300);
+        
+=======
+<<<<<<< HEAD
+        super(800, 600, 1);
         addObject(new Ship(), 140, 700);
         // First row
         addObject(new Enemies(), 100, 100);
@@ -95,6 +101,14 @@ public class MyWorld extends World
         addObject(new Enemies(), 700, 300);
         
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
+<<<<<<< HEAD
 
+=======
+=======
+        super(1500, 1000, 1);
+        addObject(new Ship(), 750, 900);
+>>>>>>> 133a516fc9dc7e12d189dc93dc64520b82eca008
+>>>>>>> 30df966ed7071b365a86e551777b24ca9a3762b3
+>>>>>>> f18a6f5f547017dfe0c6813c58c59883cac7f642
     }
 }
