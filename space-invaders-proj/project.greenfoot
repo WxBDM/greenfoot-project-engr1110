@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Oct 30 14:30:51 CDT 2018
+#Tue Oct 30 15:00:25 CDT 2018
 readme.name=@README
 target2.name=Ship
 dependency1.from=MyWorld
@@ -21,7 +21,6 @@ target2.height=50
 target1.x=0
 class.Ship.image=Ship.png
 dependency1.to=Ship
-<<<<<<< HEAD
 target3.height=50
 editor.fx.0.height=735
 target1.showInterface=false
@@ -31,37 +30,19 @@ editor.fx.0.width=813
 class.MyWorld.image=space1.jpg
 target3.name=MyWorld
 target2.typeParameters=
-=======
-dependency1.type=UsesDependency
-editor.fx.0.height=465
-editor.fx.0.width=813
-editor.fx.0.x=265
-editor.fx.0.y=42
-mainWindow.height=1249
-mainWindow.width=2261
-mainWindow.x=345
-mainWindow.y=89
-package.numDependencies=1
-package.numTargets=2
-project.charset=UTF-8
-readme.height=58
-readme.name=@README
-readme.width=47
-readme.x=10
->>>>>>> 133a516fc9dc7e12d189dc93dc64520b82eca008
 readme.y=10
 readme.x=10
-mainWindow.width=1440
+mainWindow.width=1070
 target1.typeParameters=
 dependency2.from=MyWorld
 target2.width=80
-mainWindow.y=41
+mainWindow.y=101
 target1.width=80
-mainWindow.height=755
+mainWindow.height=749
 target3.width=80
-mainWindow.x=42
-editor.fx.0.y=41
-editor.fx.0.x=393
+mainWindow.x=370
+editor.fx.0.y=112
+editor.fx.0.x=309
 readme.width=47
 target3.showInterface=false
 target2.type=ClassTarget
