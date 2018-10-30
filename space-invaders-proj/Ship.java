@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ship extends Actor
 {
+    public int lives = 3;
     /**
      * Act - do whatever the Ship wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,11 +16,41 @@ public class Ship extends Actor
     
     public Ship() {
         GreenfootImage shipImage = new GreenfootImage("Ship.png");
-        shipImage.scale(shipImage.getWidth() / 7, shipImage.getHeight() / 7);
+        shipImage.scale(shipImage.getWidth() / 8, shipImage.getHeight() / 8);
         setImage(shipImage);
     }
     public void act() 
     {
-        // Add your action code here.
-    }    
+        handleKeyPress();
+    }   
+    public void checkCollision() {
+        /**Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
+        if(e != null) {
+            getWorld().removeObject(this);
+            lives--;
+        }*/
+    }
+    public void handleKeyPress() {
+        checkLeftArrow();
+        checkRightArrow();
+        checkSpaceBar();
+    }
+    public void checkLeftArrow() {
+         if (Greenfoot.isKeyDown("Left")) {
+             move(-4);
+            }
+    }
+    public void checkRightArrow() {
+        if (Greenfoot.isKeyDown("Right")) {
+            move(4);
+        }
+    }
+    public void checkSpaceBar() {
+        if (Greenfoot.isKeyDown("space")) {
+            shootBullet();
+        }
+    }
+    public void shootBullet() {
+        getWorld().addObject(new Bullet(), getX(), getY() - 50);
+    }
 }
