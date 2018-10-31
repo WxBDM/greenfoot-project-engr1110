@@ -17,7 +17,8 @@ public class Enemies extends Actor
     }
     
     public void act() 
-    {
-       
-    }    
+{
+    setRotation(0);
+    move(1);
+}
 }
