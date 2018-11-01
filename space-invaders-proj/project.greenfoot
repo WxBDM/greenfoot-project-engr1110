@@ -1,140 +1,39 @@
-<<<<<<< HEAD
-#Greenfoot properties
-#Thu Nov 01 14:03:24 CDT 2018
-readme.name=@README
-target2.name=Enemies
-target4.y=0
-target4.x=0
-target4.name=MyWorld
-dependency1.from=Ship
-target2.showInterface=false
-class.Ship.superclass=greenfoot.Actor
-dependency3.from=MyWorld
-target3.y=0
-target3.x=0
-target1.type=ClassTarget
-class.Bullet.image=bullet.png
-=======
-<<<<<<< HEAD
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=133a516fc9dc7e12d189dc93dc64520b82eca008
+>>>>>>>=24c3e83a27c92d3d0c03faea7ed8d5fa3b226532
+class.Bullet.image=bullet.png
+class.Bullet.superclass=greenfoot.Actor
 class.Enemies.image=robot.png
 class.Enemies.superclass=greenfoot.Actor
 class.MyWorld.image=space1.jpg
 class.MyWorld.superclass=greenfoot.World
+class.Rocket.image=rocket.png
+class.Rocket.superclass=greenfoot.Actor
 class.Ship.image=Ship.png
-class.Ship.superclass=greenfoot.Actor
-dependency1.from=MyWorld
-dependency1.to=Ship
-dependency1.type=UsesDependency
-dependency2.from=MyWorld
-dependency2.to=Enemies
-dependency2.type=UsesDependency
-editor.fx.0.height=753
-editor.fx.0.width=813
-editor.fx.0.x=393
-editor.fx.0.y=41
-mainWindow.height=755
-mainWindow.width=1440
-mainWindow.x=0
-mainWindow.y=41
-package.numDependencies=2
-=======
-<<<<<<< HEAD
-#Greenfoot properties
-#Tue Oct 30 15:00:25 CDT 2018
-readme.name=@README
-target2.name=Ship
-dependency1.from=MyWorld
-target2.showInterface=false
-class.Ship.superclass=greenfoot.Actor
-target3.y=0
-target3.x=0
-target1.type=ClassTarget
-=======
-#Greenfoot project file
-class.Bullet.image=bullet.png
-class.Bullet.superclass=greenfoot.Actor
-class.MyWorld.image=space1.jpg
->>>>>>> f18a6f5f547017dfe0c6813c58c59883cac7f642
->>>>>>> 24c3e83a27c92d3d0c03faea7ed8d5fa3b226532
-class.MyWorld.superclass=greenfoot.World
-target3.type=ClassTarget
-target2.y=0
-target2.x=0
-package.numTargets=4
-dependency3.to=Bullet
-target1.height=50
-dependency2.type=UsesDependency
-target4.showInterface=false
-class.Bullet.superclass=greenfoot.Actor
-dependency4.type=UsesDependency
-target1.y=0
-target2.height=50
-target1.x=0
-class.Ship.image=Ship.png
-<<<<<<< HEAD
-target4.typeParameters=
-=======
-<<<<<<< HEAD
-dependency1.to=Ship
-target3.height=50
-editor.fx.0.height=735
-target1.showInterface=false
-target3.typeParameters=
-target1.name=Enemies
-editor.fx.0.width=813
-class.MyWorld.image=space1.jpg
-target3.name=MyWorld
-target2.typeParameters=
-readme.y=10
-readme.x=10
-mainWindow.width=1070
-target1.typeParameters=
-dependency2.from=MyWorld
-target2.width=80
-mainWindow.y=101
-target1.width=80
-mainWindow.height=749
-target3.width=80
-mainWindow.x=370
-editor.fx.0.y=112
-editor.fx.0.x=309
-readme.width=47
-target3.showInterface=false
-=======
 class.Ship.superclass=greenfoot.Actor
 dependency1.from=Ship
->>>>>>> 24c3e83a27c92d3d0c03faea7ed8d5fa3b226532
 dependency1.to=Bullet
-target3.height=50
-editor.fx.0.height=465
-target1.showInterface=false
-target3.typeParameters=
-target1.name=Bullet
-editor.fx.0.width=813
-<<<<<<< HEAD
-target4.height=50
-class.MyWorld.image=space1.jpg
-target3.name=Ship
-target2.typeParameters=
-readme.y=10
-readme.x=10
-target1.typeParameters=
-mainWindow.width=2261
+dependency1.type=UsesDependency
 dependency2.from=MyWorld
-=======
-editor.fx.0.x=28
-editor.fx.0.y=208
-mainWindow.height=1249
-mainWindow.width=2261
-mainWindow.x=345
-mainWindow.y=89
-package.numDependencies=3
->>>>>>> 424c5fdf2f67ee7497d7dde4e4827384565e87df
-package.numTargets=3
+dependency2.to=Ship
+dependency2.type=UsesDependency
+dependency3.from=MyWorld
+dependency3.to=Bullet
+dependency3.type=UsesDependency
+dependency4.from=MyWorld
+dependency4.to=Enemies
+dependency4.type=UsesDependency
+editor.fx.0.height=1056
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+mainWindow.height=1084
+mainWindow.width=1924
+mainWindow.x=21
+mainWindow.y=41
+package.numDependencies=4
+package.numTargets=5
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -142,11 +41,7 @@ readme.width=47
 readme.x=10
 readme.y=10
 target1.height=50
-<<<<<<< HEAD
-target1.name=Enemies
-=======
 target1.name=Bullet
->>>>>>> 424c5fdf2f67ee7497d7dde4e4827384565e87df
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
@@ -154,36 +49,36 @@ target1.width=80
 target1.x=0
 target1.y=0
 target2.height=50
-target2.name=Ship
+target2.name=Enemies
 target2.showInterface=false
-<<<<<<< HEAD
-=======
->>>>>>> f18a6f5f547017dfe0c6813c58c59883cac7f642
->>>>>>> 424c5fdf2f67ee7497d7dde4e4827384565e87df
 target2.type=ClassTarget
 target2.typeParameters=
->>>>>>> 24c3e83a27c92d3d0c03faea7ed8d5fa3b226532
 target2.width=80
-target4.width=80
-target1.width=80
-mainWindow.y=322
-mainWindow.height=1249
-target3.width=80
-dependency4.from=MyWorld
-mainWindow.x=468
-dependency4.to=Enemies
-editor.fx.0.y=373
-editor.fx.0.x=699
-readme.width=47
+target2.x=0
+target2.y=0
+target3.height=50
+target3.name=Ship
 target3.showInterface=false
-target2.type=ClassTarget
-world.lastInstantiated=MyWorld
+target3.type=ClassTarget
+target3.typeParameters=
+target3.width=80
+target3.x=0
+target3.y=0
+target4.height=50
+target4.name=Rocket
+target4.showInterface=false
 target4.type=ClassTarget
-dependency1.type=UsesDependency
+target4.typeParameters=
+target4.width=80
+target4.x=0
+target4.y=0
+target5.height=50
+target5.name=MyWorld
+target5.showInterface=false
+target5.type=ClassTarget
+target5.typeParameters=
+target5.width=80
+target5.x=0
+target5.y=0
 version=3.0.0
-package.numDependencies=4
-dependency3.type=UsesDependency
-project.charset=UTF-8
-readme.height=58
-dependency2.to=Ship
-class.Enemies.superclass=greenfoot.Actor
+world.lastInstantiated=MyWorld

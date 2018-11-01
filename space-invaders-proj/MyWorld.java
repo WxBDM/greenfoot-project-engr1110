@@ -21,7 +21,7 @@ public class MyWorld extends World
         addObject(new Ship(), 400, 550);
         addObject(new Bullet(), 400, 300);
 
-        super(800, 600, 1);
+       
 
         // show the enemies.
         for (int i = 100; i <= 300; i = i + 50){
