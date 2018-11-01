@@ -19,9 +19,8 @@ public class MyWorld extends World
 
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
-        addObject(new Bullet(), 400, 300);
-
-        super(800, 600, 1);
+        
+        //super(800, 600, 1);
 
         // show the enemies.
         for (int i = 100; i <= 300; i = i + 50){
@@ -34,8 +33,15 @@ public class MyWorld extends World
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
         
         // add the player to the world. Class: ship.
-        addObject(new Ship(), 750, 900);
+        //addObject(new Ship(), 750, 900);
 
     }
-    
+    public void act() {
+         scroll();
+    }
+    public void scroll() {
+        GreenfootImage background = getBackground();
+        getBackground().drawImage(background, 0, -1);
+        getBackground().drawImage(background, 0, background.getHeight()-1);
+    }
 }
