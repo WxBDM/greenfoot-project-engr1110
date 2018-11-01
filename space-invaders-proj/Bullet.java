@@ -19,6 +19,10 @@ public class Bullet extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        setLocation(getX(), getY() - 10);
+        if (getY() < 20) {
+            getWorld().removeObject(this);
+        }
     }    
+    
 }

@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ship extends Actor
 {
     public int lives = 3;
+    public int shotTimer = 0;
     /**
      * Act - do whatever the Ship wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,14 +22,16 @@ public class Ship extends Actor
     }
     public void act() 
     {
+        //checkCollision;
         handleKeyPress();
+        shotTimer++;
     }   
     public void checkCollision() {
-        /**Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
+        Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
         if(e != null) {
             getWorld().removeObject(this);
             lives--;
-        }*/
+        }
     }
     public void handleKeyPress() {
         checkLeftArrow();
@@ -51,6 +54,9 @@ public class Ship extends Actor
         }
     }
     public void shootBullet() {
+        if (shotTimer > 25) {
         getWorld().addObject(new Bullet(), getX(), getY() - 50);
+        shotTimer = 0;
+    }
     }
 }

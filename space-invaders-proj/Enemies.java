@@ -14,11 +14,20 @@ public class Enemies extends Actor
      */
     public Enemies() {
         GreenfootImage enemyImage = new GreenfootImage("robot.png");
+        
     }
     
     public void act() 
 {
     setRotation(0);
     move(1);
+    checkIntersecting();
 }
+private void checkIntersecting() {
+        Bullet b = (Bullet) getOneIntersectingObject (Bullet.class);
+        if (b != null) {
+            getWorld().removeObject(b);
+            getWorld().removeObject(this);
+        }
+    }
 }

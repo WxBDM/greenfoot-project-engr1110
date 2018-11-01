@@ -1,10 +1,15 @@
 #Greenfoot project file
+<<<<<<< HEAD
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
 >>>>>>>=24c3e83a27c92d3d0c03faea7ed8d5fa3b226532
 class.Bullet.image=bullet.png
 class.Bullet.superclass=greenfoot.Actor
 class.Enemies.image=robot.png
+=======
+class.Bullet.image=bullet.png
+class.Bullet.superclass=greenfoot.Actor
+>>>>>>> acc9db0f09f68b2f310a89ae1a3d57f769921b52
 class.Enemies.superclass=greenfoot.Actor
 class.MyWorld.image=space1.jpg
 class.MyWorld.superclass=greenfoot.World
@@ -12,6 +17,7 @@ class.Rocket.image=rocket.png
 class.Rocket.superclass=greenfoot.Actor
 class.Ship.image=Ship.png
 class.Ship.superclass=greenfoot.Actor
+<<<<<<< HEAD
 dependency1.from=Ship
 dependency1.to=Bullet
 dependency1.type=UsesDependency
@@ -34,6 +40,39 @@ mainWindow.x=21
 mainWindow.y=41
 package.numDependencies=4
 package.numTargets=5
+=======
+dependency1.from=Bullet
+dependency1.to=Enemies
+dependency1.type=UsesDependency
+dependency2.from=Enemies
+dependency2.to=Bullet
+dependency2.type=UsesDependency
+dependency3.from=Ship
+dependency3.to=Bullet
+dependency3.type=UsesDependency
+dependency4.from=Ship
+dependency4.to=Enemies
+dependency4.type=UsesDependency
+dependency5.from=MyWorld
+dependency5.to=Ship
+dependency5.type=UsesDependency
+dependency6.from=MyWorld
+dependency6.to=Bullet
+dependency6.type=UsesDependency
+dependency7.from=MyWorld
+dependency7.to=Enemies
+dependency7.type=UsesDependency
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+mainWindow.height=1731
+mainWindow.width=1622
+mainWindow.x=1589
+mainWindow.y=0
+package.numDependencies=7
+package.numTargets=4
+>>>>>>> acc9db0f09f68b2f310a89ae1a3d57f769921b52
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
@@ -65,13 +104,18 @@ target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
+<<<<<<< HEAD
 target4.name=Rocket
+=======
+target4.name=MyWorld
+>>>>>>> acc9db0f09f68b2f310a89ae1a3d57f769921b52
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
 target4.width=80
 target4.x=0
 target4.y=0
+<<<<<<< HEAD
 target5.height=50
 target5.name=MyWorld
 target5.showInterface=false
@@ -80,5 +124,7 @@ target5.typeParameters=
 target5.width=80
 target5.x=0
 target5.y=0
+=======
+>>>>>>> acc9db0f09f68b2f310a89ae1a3d57f769921b52
 version=3.0.0
 world.lastInstantiated=MyWorld

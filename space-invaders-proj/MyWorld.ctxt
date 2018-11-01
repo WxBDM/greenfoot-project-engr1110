@@ -4,4 +4,12 @@ comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ 
 comment1.params=
 comment1.target=MyWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
+<<<<<<< HEAD
 numComments=2
+=======
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ scroll()
+numComments=4
+>>>>>>> acc9db0f09f68b2f310a89ae1a3d57f769921b52
