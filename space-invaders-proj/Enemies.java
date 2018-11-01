@@ -14,6 +14,7 @@ public class Enemies extends Actor
      */
     public Enemies() {
         GreenfootImage enemyImage = new GreenfootImage("robot.png");
+        
     }
     
     public void act() 
