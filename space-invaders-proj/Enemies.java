@@ -21,5 +21,13 @@ public class Enemies extends Actor
 {
     setRotation(0);
     move(1);
+    checkIntersecting();
 }
+private void checkIntersecting() {
+        Bullet b = (Bullet) getOneIntersectingObject (Bullet.class);
+        if (b != null) {
+            getWorld().removeObject(b);
+            getWorld().removeObject(this);
+        }
+    }
 }

@@ -38,5 +38,12 @@ public class MyWorld extends World
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
 
     }
-    
+    public void act() {
+         scroll();
+    }
+    public void scroll() {
+        GreenfootImage background = getBackground();
+        getBackground().drawImage(background, 0, -1);
+        getBackground().drawImage(background, 0, background.getHeight()-1);
+    }
 }
