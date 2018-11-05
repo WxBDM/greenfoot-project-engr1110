@@ -14,16 +14,18 @@ public class Enemies extends Actor
      */
     public Enemies() {
         GreenfootImage enemyImage = new GreenfootImage("robot.png");
-        
+        int score = 0;
     }
     
-    public void act() 
-{
-    setRotation(0);
-    move(1);
-    checkIntersecting();
-}
-private void checkIntersecting() {
+    public void act() {
+        move(1);
+        checkIntersecting();
+    }
+    /**
+     * Checks for any intersecting Bullets. If the bullet intersects,
+     *  then delete the enemey and add a point.
+     */
+    private void checkIntersecting() {
         Bullet b = (Bullet) getOneIntersectingObject (Bullet.class);
         if (b != null) {
             getWorld().removeObject(b);

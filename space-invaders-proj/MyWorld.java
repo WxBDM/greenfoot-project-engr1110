@@ -6,20 +6,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
-{
+public class MyWorld extends World {
+    
+    // global variables for lives and score.
+    int score = 0;
+    int num_lives = 3;
 
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public MyWorld()
-    {    
+    public MyWorld() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-
         super(800, 600, 1);
+        
+        // add in ship and bullet. Bullet is located under the ship and will 
+        // "respawn" when it is shot. The bullet at all times moves with the ship.
         addObject(new Ship(), 400, 550);
-        addObject(new Bullet(), 400, 300);
+        addObject(new Bullet(), 400, 550);
         
         // show how many enemies. All enemies start in the upper left.
         int num_rows = 5;
@@ -36,14 +40,23 @@ public class MyWorld extends World
         
         // set the order in which goes on top.
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
-
+        
+        // put some text on the screen - upper left.
+        showText("Lives: " + num_lives, 60, 20);
+        showText("Score: " + score, 60, 42);
     }
+    
     public void act() {
-         scroll();
+         scrollBackground();
     }
-    public void scroll() {
+    
+    /**
+     * Scrolls the background to simulate the ship moving through space.
+     */
+    public void scrollBackground() {
         GreenfootImage background = getBackground();
         getBackground().drawImage(background, 0, -1);
-        getBackground().drawImage(background, 0, background.getHeight()-1);
+        getBackground().drawImage(background, 0, background.getHeight() - 1);
     }
+
 }

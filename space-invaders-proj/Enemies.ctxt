@@ -8,4 +8,5 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ checkIntersecting()
+comment3.text=\n\ Checks\ for\ any\ intersecting\ Bullets.\ If\ the\ bullet\ intersects,\n\ \ then\ delete\ the\ enemey\ and\ add\ a\ point.\n
 numComments=4
