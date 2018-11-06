@@ -8,12 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ship extends Actor
 {
-    public int lives = 3;
-    public int shotTimer = 0;
-    /**
-     * Act - do whatever the Ship wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public static int lives = 3;
+    public int shotTimer = 25;
     
     public Ship() {
         GreenfootImage shipImage = new GreenfootImage("Ship.png");
@@ -22,16 +18,23 @@ public class Ship extends Actor
     }
     public void act() 
     {
-        //checkCollision;
+        checkCollision();
         handleKeyPress();
-        shotTimer++;
+        shotTimer--;
     }   
     public void checkCollision() {
         Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
         if(e != null) {
-            getWorld().removeObject(this);
+            getWorld().addObject(new Explosion(), getX(), getY());
             lives--;
+            if (lives <= 0) {
+                Greenfoot.stop();
+            }
+            setLocation(400, 550);
         }
+    }
+    public static int getLives() {
+        return lives;
     }
     public void handleKeyPress() {
         checkLeftArrow();
@@ -54,9 +57,10 @@ public class Ship extends Actor
         }
     }
     public void shootBullet() {
-        if (shotTimer > 25) {
+        if (shotTimer < 0) {
         getWorld().addObject(new Bullet(), getX(), getY() - 50);
-        shotTimer = 0;
+        Greenfoot.playSound("shotSound.aiff");
+        shotTimer = 25;
     }
     }
 }
