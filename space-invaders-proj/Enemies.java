@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemies extends Actor
 {
+    public static int score = 0; // the score of the player
+    
     /**
      * Act - do whatever the Enemies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,6 +32,11 @@ public class Enemies extends Actor
         if (b != null) {
             getWorld().removeObject(b);
             getWorld().removeObject(this);
+            score++; //updates score
         }
+    }
+    
+    public static int getScore() {
+        return score;
     }
 }

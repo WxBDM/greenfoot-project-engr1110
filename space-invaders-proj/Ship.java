@@ -10,13 +10,12 @@ public class Ship extends Actor
 {
     public static int lives = 3; // number of lives.
     public int shotTimer = 25; // cooldown for shots fired.
-    public int respawnTime = 0; // cooldown for respawn.
     
     /**
      * Constructor
      */
     public Ship() {
-        GreenfootImage shipImage = new GreenfootImage("Ship.png");
+        GreenfootImage shipImage = new GreenfootImage("ship_cropped.png");
         shipImage.scale(shipImage.getWidth() / 8, shipImage.getHeight() / 8);
         setImage(shipImage);
     }

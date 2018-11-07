@@ -12,14 +12,14 @@ public class MyWorld extends World {
      * Constructor for object of class MyWorld.
      * 
      */
-    public MyWorld() {    
+    public MyWorld() { 
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         
         // add in ship and bullet. Bullet is located under the ship and will 
         // "respawn" when it is shot. The bullet at all times moves with the ship.
         addObject(new Ship(), 400, 550);
-        //addObject(new Bullet(), 400, 550);
         
         // show how many enemies. All enemies start in the upper left.
         int num_rows = 5;
@@ -36,11 +36,23 @@ public class MyWorld extends World {
         
         // set the order in which goes on top.
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
+        
+        // displays the lives and score upon initialization.
+        displayLivesAndScore();
+       
     }
     
     public void act() {
          scrollBackground();
-         showText("Lives: " + Ship.getLives(), 60, 20);
+         displayLivesAndScore();
+    }
+
+    /**
+     * Displays score and lives.
+     */ 
+    private void displayLivesAndScore() {
+        showText("Lives: " + Ship.getLives(), 60, 20);
+        showText("Score: " + Enemies.getScore(), 60, 40);
     }
     
     /**
@@ -50,10 +62,6 @@ public class MyWorld extends World {
         GreenfootImage background = getBackground();
         getBackground().drawImage(background, 0, -1);
         getBackground().drawImage(background, 0, background.getHeight() - 1);
-    }
-    
-    public void resetGame() {
-        
     }
     
 }
