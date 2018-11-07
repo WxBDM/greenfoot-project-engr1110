@@ -7,13 +7,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class MyWorld extends World {
-    
-    // global variables for lives and score.
-    int score = 0;
-    public static int num_lives = 3;
 
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for object of class MyWorld.
      * 
      */
     public MyWorld() {    
@@ -40,9 +36,6 @@ public class MyWorld extends World {
         
         // set the order in which goes on top.
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
-        
-        
-        showText("Score: " + score, 60, 42);
     }
     
     public void act() {
@@ -57,6 +50,10 @@ public class MyWorld extends World {
         GreenfootImage background = getBackground();
         getBackground().drawImage(background, 0, -1);
         getBackground().drawImage(background, 0, background.getHeight() - 1);
+    }
+    
+    public void resetGame() {
+        
     }
     
 }
