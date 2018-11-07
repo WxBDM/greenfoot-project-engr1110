@@ -7,6 +7,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class MyWorld extends World {
+    
+    // determines number of enemies.
+    private static int numRows = 3;
+    private static int numCols = 3;
+    public static int numEnemies = numRows * numCols;
 
     /**
      * Constructor for object of class MyWorld.
@@ -20,14 +25,10 @@ public class MyWorld extends World {
         // add in ship and bullet. Bullet is located under the ship and will 
         // "respawn" when it is shot. The bullet at all times moves with the ship.
         addObject(new Ship(), 400, 550);
-        
-        // show how many enemies. All enemies start in the upper left.
-        int num_rows = 5;
-        int num_columns = 5;
 
         // show the enemies.
-        for (int i = 100; i <= (num_rows + 1) * 50; i = i + 50){
-            for (int j = 100; j <= (num_columns + 1) * 50; j = j + 50) {
+        for (int i = 100; i <= (numRows + 1) * 50; i = i + 50){
+            for (int j = 100; j <= (numCols + 1) * 50; j = j + 50) {
                 Actor actor = new Enemies(){};
                 actor.turn(90);
                 addObject(actor, j, i);
