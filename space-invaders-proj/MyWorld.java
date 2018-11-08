@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public int shot = 1;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -16,99 +16,47 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
         addObject(new Bullet(), 400, 300);
-        
-=======
-<<<<<<< HEAD
-        super(800, 600, 1);
-        addObject(new Ship(), 140, 700);
-        // First row
-        addObject(new Enemies(), 100, 100);
-        addObject(new Enemies(), 150, 100);
-        addObject(new Enemies(), 200, 100);
-        addObject(new Enemies(), 250, 100);
-        addObject(new Enemies(), 300, 100);
-        addObject(new Enemies(), 350, 100);
-        addObject(new Enemies(), 400, 100);
-        addObject(new Enemies(), 450, 100);
-        addObject(new Enemies(), 500, 100);
-        addObject(new Enemies(), 550, 100);
-        addObject(new Enemies(), 600, 100);
-        addObject(new Enemies(), 650, 100);
-        addObject(new Enemies(), 700, 100);
-        
-        //Second Row
-        addObject(new Enemies(), 100, 150);
-        addObject(new Enemies(), 150, 150);
-        addObject(new Enemies(), 200, 150);
-        addObject(new Enemies(), 250, 150);
-        addObject(new Enemies(), 300, 150);
-        addObject(new Enemies(), 350, 150);
-        addObject(new Enemies(), 400, 150);
-        addObject(new Enemies(), 450, 150);
-        addObject(new Enemies(), 500, 150);
-        addObject(new Enemies(), 550, 150);
-        addObject(new Enemies(), 600, 150);
-        addObject(new Enemies(), 650, 150);
-        addObject(new Enemies(), 700, 150);
-        
-        //Third Row
-        addObject(new Enemies(), 100, 200);
-        addObject(new Enemies(), 150, 200);
-        addObject(new Enemies(), 200, 200);
-        addObject(new Enemies(), 250, 200);
-        addObject(new Enemies(), 300, 200);
-        addObject(new Enemies(), 350, 200);
-        addObject(new Enemies(), 400, 200);
-        addObject(new Enemies(), 450, 200);
-        addObject(new Enemies(), 500, 200);
-        addObject(new Enemies(), 550, 200);
-        addObject(new Enemies(), 600, 200);
-        addObject(new Enemies(), 650, 200);
-        addObject(new Enemies(), 700, 200);
-        
-        //Fourth Row
-        addObject(new Enemies(), 100, 250);
-        addObject(new Enemies(), 150, 250);
-        addObject(new Enemies(), 200, 250);
-        addObject(new Enemies(), 250, 250);
-        addObject(new Enemies(), 300, 250);
-        addObject(new Enemies(), 350, 250);
-        addObject(new Enemies(), 400, 250);
-        addObject(new Enemies(), 450, 250);
-        addObject(new Enemies(), 500, 250);
-        addObject(new Enemies(), 550, 250);
-        addObject(new Enemies(), 600, 250);
-        addObject(new Enemies(), 650, 250);
-        addObject(new Enemies(), 700, 250);
-        
-        //Fifth Row
-        addObject(new Enemies(), 100, 300);
-        addObject(new Enemies(), 150, 300);
-        addObject(new Enemies(), 200, 300);
-        addObject(new Enemies(), 250, 300);
-        addObject(new Enemies(), 300, 300);
-        addObject(new Enemies(), 350, 300);
-        addObject(new Enemies(), 400, 300);
-        addObject(new Enemies(), 450, 300);
-        addObject(new Enemies(), 500, 300);
-        addObject(new Enemies(), 550, 300);
-        addObject(new Enemies(), 600, 300);
-        addObject(new Enemies(), 650, 300);
-        addObject(new Enemies(), 700, 300);
-        
-        setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
-<<<<<<< HEAD
-
-=======
-=======
-        super(1500, 1000, 1);
-        addObject(new Ship(), 750, 900);
->>>>>>> 133a516fc9dc7e12d189dc93dc64520b82eca008
->>>>>>> 30df966ed7071b365a86e551777b24ca9a3762b3
->>>>>>> f18a6f5f547017dfe0c6813c58c59883cac7f642
+        setPaintOrder(Ship.class, MyWorld.class);
+        populate();
+    }
+    
+        public void ShootSet(int arg)
+    {
+        shot = arg;
+    }
+    
+        public void populate()
+    {
+        //first row
+        Enemy1[] enemies1 = new Enemy1[10];
+        for ( int i = 0; i <10; i++ ) {
+            enemies1[i] = new Enemy1();
+            addObject(enemies1[i], (i*50)+150, 100);
+        }
+        //second row
+       Enemy2[] enemies2 = new Enemy2[21];
+        for ( int i = 0; i <10; i++ ) {
+            enemies2[i] = new Enemy2();
+            addObject(enemies2[i], (i*50)+150, 150);
+        }
+        //3rd row
+        for ( int i = 11; i <21; i++ ) {
+            enemies2[i] = new Enemy2();
+            addObject(enemies2[i], ((i*50)+150), 200);
+        } 
+        //4th row
+        Enemy3[] enemies3 = new Enemy3[21];
+        for ( int i = 0; i <10; i++ ) {
+            enemies3[i] = new Enemy3();
+            addObject(enemies3[i], (i*50)+150, 250);
+        } 
+        //final row
+        for ( int i = 11; i <21; i++ ) {
+            enemies3[i] = new Enemy3();
+            addObject(enemies3[i], ((i*50)+150), 300);
+        } 
     }
 }

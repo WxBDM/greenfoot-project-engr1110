@@ -6,19 +6,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemies extends Actor
+public class Enemy1 extends Actor
 {
     /**
      * Act - do whatever the Enemies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Enemies() {
-        GreenfootImage enemyImage = new GreenfootImage("robot.png");
+
+    public Enemy1() {
+        GreenfootImage enemy1Image = new GreenfootImage("enemy1.gif");
     }
     
-    public void act() 
-{
-    setRotation(0);
-    move(1);
-}
+    public void act() {
+       
+    }
 }

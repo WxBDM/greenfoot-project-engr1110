@@ -19,6 +19,17 @@ public class Bullet extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+       int y = getY();
+       y = y-2;
+       setLocation(getX(), y);
+       
+       if (getY() == 0) {
+           destroy();
+        }
     }    
-}
+    
+    private void destroy() {
+        ((MyWorld) getWorld()).ShootSet(1);
+        getWorld().removeObject(this);
+    }
+}  
