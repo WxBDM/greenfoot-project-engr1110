@@ -5,5 +5,12 @@ comment1.params=
 comment1.target=Bullet()
 comment2.params=
 comment2.target=void\ act()
+<<<<<<< HEAD
 comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Bullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=3
+=======
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Bullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=
+comment3.target=void\ destroy()
+numComments=4
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e

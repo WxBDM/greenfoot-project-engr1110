@@ -6,10 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bullet extends Actor
-{
+public class Bullet extends Actor {
     public Bullet() {
-        GreenfootImage bulletImage = new GreenfootImage("Bullet.png");
+        GreenfootImage bulletImage = new GreenfootImage("bullet_cropped.png");
         bulletImage.scale(bulletImage.getWidth() / 5, bulletImage.getHeight() / 5);
         setImage(bulletImage);
     }
@@ -19,10 +18,17 @@ public class Bullet extends Actor
      */
     public void act() 
     {
-        setLocation(getX(), getY() - 10);
-        if (getY() < 20) {
-            getWorld().removeObject(this);
+       int y = getY();
+       y = y-2;
+       setLocation(getX(), y);
+       
+       if (getY() == 0) {
+           destroy();
         }
     }    
     
-}
+    private void destroy() {
+        ((MyWorld) getWorld()).ShootSet(1);
+        getWorld().removeObject(this);
+    }
+}  

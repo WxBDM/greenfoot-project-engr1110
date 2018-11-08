@@ -18,8 +18,12 @@ public class Explosion extends Actor
         setImage(images[0]);
         Greenfoot.playSound("explosionSound.wav");
     }
+    
+    /**
+     * Initializes the image.
+     */
     public synchronized static void initialiseImages() {
-        GreenfootImage baseImage = new GreenfootImage("explosionImage.jpg");
+        GreenfootImage baseImage = new GreenfootImage("explosion_test.png");
         int maxSize = baseImage.getWidth();
         int delta = maxSize / IMAGE_COUNT;
         int size = 0;
@@ -30,6 +34,9 @@ public class Explosion extends Actor
             images[i].scale(size, size);
         }
     }
+    /**
+     * Grows the image and then dissapears once the image grows big enough.
+     */
     public void act() 
     {
         setImage(images[imageNum]);

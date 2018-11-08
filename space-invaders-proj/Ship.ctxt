@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Ship
+<<<<<<< HEAD
 comment0.text=\r\n\ The\ ship\ class.\ This\ is\ the\ player.\r\n\ \r\n\ @author\ Smells\ like\ Team\ Spirit\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Ship()
@@ -32,3 +33,24 @@ comment9.params=
 comment9.target=void\ checkSpaceBar()
 comment9.text=\r\n\ checks\ to\ see\ if\ user\ pressed\ the\ space\ bar.\ If\ so,\ shoot\ the\ bullet.\r\n
 numComments=11
+=======
+comment0.text=\n\ Write\ a\ description\ of\ class\ Ship\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Ship()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Ship\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkCollision()
+comment4.params=
+comment4.target=void\ handleKeyPress()
+comment5.params=
+comment5.target=void\ checkLeftArrow()
+comment6.params=
+comment6.target=void\ checkRightArrow()
+comment7.params=
+comment7.target=void\ checkSpaceBar()
+comment8.params=
+comment8.target=void\ shootBullet()
+numComments=9
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
