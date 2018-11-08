@@ -1,22 +1,40 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Thu Nov 08 13:54:23 CST 2018
 dependency9.type=UsesDependency
 target4.type=ClassTarget
 dependency3.from=Enemy1
+=======
+#Wed Nov 07 10:15:57 CST 2018
+dependency9.type=UsesDependency
+target4.type=ClassTarget
+<<<<<<<=HEAD
+dependency3.from=Enemies
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 target3.height=50
 target5.height=50
 readme.y=10
 dependency3.type=UsesDependency
 readme.x=10
+<<<<<<< HEAD
 dependency10.to=Enemy3
 target4.name=Enemy3
 target4.typeParameters=
 readme.width=47
+=======
+dependency10.to=Enemies
+target4.name=Ship
+dependency11.to=Rocket
+target4.typeParameters=
+readme.width=47
+class.Enemies.superclass=greenfoot.Actor
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 editor.fx.0.width=800
 target1.height=50
 target5.type=ClassTarget
 class.Bullet.superclass=greenfoot.Actor
 target3.typeParameters=
+<<<<<<< HEAD
 dependency4.from=Enemy1
 mainWindow.width=1070
 dependency4.type=UsesDependency
@@ -61,6 +79,45 @@ target7.y=0
 target7.x=0
 dependency9.to=Enemy2
 target7.name=MyWorld
+=======
+dependency4.from=Ship
+mainWindow.width=1241
+dependency4.type=UsesDependency
+>>>>>>>=d215bfe1b5ade070b4deb107dd5513c4693c95e3
+target2.width=80
+target5.name=Rocket
+class.Explosion.superclass=greenfoot.Actor
+version=3.0.0
+class.Rocket.superclass=greenfoot.Actor
+target6.type=ClassTarget
+dependency1.to=Enemies
+class.Ship.image=ship_cropped.png
+dependency5.from=Ship
+class.Enemies.image=robot_cropped.png
+dependency2.to=Bullet
+target1.width=80
+dependency5.type=UsesDependency
+editor.fx.0.y=53
+target2.typeParameters=
+editor.fx.0.x=388
+dependency3.to=MyWorld
+target3.showInterface=false
+target6.name=MyWorld
+dependency4.to=Bullet
+dependency5.to=Enemies
+target1.showInterface=false
+target5.showInterface=false
+dependency6.to=Explosion
+target6.width=80
+target6.height=50
+dependency7.to=MyWorld
+dependency6.from=Ship
+package.numTargets=6
+dependency8.to=Ship
+dependency6.type=UsesDependency
+target1.type=ClassTarget
+dependency9.to=Bullet
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 target6.y=0
 target1.typeParameters=
 target6.x=0
@@ -69,6 +126,7 @@ target2.height=50
 target5.y=0
 target4.height=50
 target5.x=0
+<<<<<<< HEAD
 target1.name=Bullet
 target4.y=0
 target4.x=0
@@ -77,31 +135,55 @@ target3.y=0
 class.Enemy1.image=enemy1.gif
 target3.x=0
 class.Enemy2.superclass=Enemy1
+=======
+class.Bullet.image=bullet.png
+target1.name=Bullet
+target4.y=0
+target4.x=0
+dependency7.from=Ship
+target3.y=0
+target3.x=0
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 dependency7.type=UsesDependency
 target2.type=ClassTarget
 target2.y=0
 target2.x=0
 class.MyWorld.superclass=greenfoot.World
+<<<<<<< HEAD
 mainWindow.y=134
 mainWindow.x=116
 target6.typeParameters=
 dependency1.from=Bullet
 target5.width=100
+=======
+mainWindow.y=23
+mainWindow.x=101
+target6.typeParameters=
+dependency1.from=Bullet
+target5.width=80
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 target1.y=0
 editor.fx.0.height=722
 target1.x=0
 dependency1.type=UsesDependency
 readme.height=58
 dependency10.from=MyWorld
+<<<<<<< HEAD
 target2.name=Enemy1
 readme.name=@README
 package.numDependencies=10
 simulation.speed=61
+=======
+target2.name=Explosion
+readme.name=@README
+package.numDependencies=11
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 dependency10.type=UsesDependency
 dependency8.from=MyWorld
 dependency8.type=UsesDependency
 target3.type=ClassTarget
 target4.width=80
+<<<<<<< HEAD
 dependency2.from=Enemy1
 dependency2.type=UsesDependency
 target5.typeParameters=
@@ -112,8 +194,25 @@ class.Enemy3.superclass=Enemy1
 target3.name=Enemy2
 target7.height=50
 target6.showInterface=false
+=======
+dependency2.from=Enemies
+dependency2.type=UsesDependency
+target5.typeParameters=
+class.Rocket.image=rocket.png
+world.lastInstantiated=MyWorld
+target2.showInterface=false
+mainWindow.height=768
+dependency11.from=MyWorld
+target3.name=Enemies
+target6.showInterface=false
+dependency11.type=UsesDependency
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a
 dependency9.from=MyWorld
 target3.width=80
 project.charset=UTF-8
 class.MyWorld.image=space1.jpg
 target4.showInterface=false
+<<<<<<< HEAD
+=======
+=\=\=\=\=\=\=
+>>>>>>> 82c8186ba8c8c0810f16425c5c34f8bb8f440b1a

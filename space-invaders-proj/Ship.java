@@ -1,56 +1,101 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ship here.
+ * The ship class. This is the player.
  * 
- * @author (your name) 
+ * @author Smells like Team Spirit 
  * @version (a version number or a date)
  */
 public class Ship extends Actor
 {
-    public int lives = 3;
-    /**
-     * Act - do whatever the Ship wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public static int lives = 3; // number of lives.
+    public int shotTimer = 25; // cooldown for shots fired.
     
+    /**
+     * Constructor
+     */
     public Ship() {
-        GreenfootImage shipImage = new GreenfootImage("Ship.png");
+        GreenfootImage shipImage = new GreenfootImage("ship_cropped.png");
         shipImage.scale(shipImage.getWidth() / 8, shipImage.getHeight() / 8);
         setImage(shipImage);
     }
-    public void act() 
-    {
+    
+    /**
+     * Act method.
+     */
+    public void act() {
+        checkCollisionEnemy();
         handleKeyPress();
-    }   
-    public void checkCollision() {
-        /**Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
+        shotTimer--;
+    } 
+    
+    /**
+     * Checks collsion with an enemy.
+     */
+    public void checkCollisionEnemy() {
+        Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
         if(e != null) {
-            getWorld().removeObject(this);
+            getWorld().addObject(new Explosion(), getX(), getY());
             lives--;
-        }*/
+            if (lives == 0) {
+                Greenfoot.setWorld(new MyWorld()); // resets game
+                lives = 3; // resets lives
+                Greenfoot.stop(); // stops the game from looping
+            }
+            setLocation(400, 550); // resets the location of player
+        }
     }
-    public void handleKeyPress() {
+    
+    /**
+     * Returns the number of lives.
+     */
+    public static int getLives() {
+        return lives;
+    }
+    
+    /**
+     * Checks to see if any of the buttons are pressed - space, right or left.
+     */
+    private void handleKeyPress() {
         checkLeftArrow();
         checkRightArrow();
         checkSpaceBar();
     }
-    public void checkLeftArrow() {
+    /**
+     * Checks to see if the player pressed the left key. If so, move 4 units left.
+     */
+    private void checkLeftArrow() {
          if (Greenfoot.isKeyDown("Left")) {
              move(-4);
-            }
+         }
     }
-    public void checkRightArrow() {
+    
+    /**
+     * Checks to see if player pressed ther right key. If so, move 4 units right.
+     */
+    private void checkRightArrow() {
         if (Greenfoot.isKeyDown("Right")) {
             move(4);
         }
     }
-    public void checkSpaceBar() {
+    
+    /**
+     * checks to see if user pressed the space bar. If so, shoot the bullet.
+     */
+    private void checkSpaceBar() {
         if (Greenfoot.isKeyDown("space")) {
             shootBullet();
         }
     }
-    public void shootBullet() {
-        getWorld().addObject(new Bullet(), getX(), getY() - 50);
+    
+    /**
+     * This method shoots the bullet.
+     */
+    private void shootBullet() {
+        if (shotTimer < 0) {
+            getWorld().addObject(new Bullet(), getX(), getY() - 50);
+            Greenfoot.playSound("shotSound.aiff");
+            shotTimer = 25;
+        }
     }
 }

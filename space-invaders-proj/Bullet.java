@@ -6,8 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bullet extends Actor
-{
+public class Bullet extends Actor {
     public Bullet() {
         GreenfootImage bulletImage = new GreenfootImage("Bullet.png");
         bulletImage.scale(bulletImage.getWidth() / 5, bulletImage.getHeight() / 5);
