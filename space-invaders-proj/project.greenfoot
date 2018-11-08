@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Thu Nov 08 14:55:18 CST 2018
+=======
+#Thu Nov 08 14:43:58 CST 2018
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
 dependency9.type=UsesDependency
 target4.type=ClassTarget
 <<<<<<<=HEAD
@@ -15,7 +19,11 @@ target4.name=Ship
 target4.typeParameters=
 readme.width=47
 class.Enemies.superclass=greenfoot.Actor
+<<<<<<< HEAD
 editor.fx.0.width=0
+=======
+editor.fx.0.width=800
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
 target1.height=50
 target5.type=ClassTarget
 class.Bullet.superclass=greenfoot.Actor
@@ -26,10 +34,18 @@ dependency4.type=UsesDependency
 >>>>>>>=e6c9ba0e8aec4e748da04b0c8dfb87b52733e036
 target2.width=80
 class.ScoreBoard.superclass=greenfoot.Actor
+<<<<<<< HEAD
 target5.name=MyWorld
 class.Explosion.superclass=greenfoot.Actor
 version=3.0.0
 class.Enemy3.image=enemy3.gif
+=======
+target5.name=Rocket
+class.Explosion.superclass=greenfoot.Actor
+version=3.0.0
+class.Enemy3.image=enemy3.gif
+class.Rocket.superclass=greenfoot.Actor
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
 target6.type=ClassTarget
 dependency1.to=Enemies
 class.Ship.image=ship_cropped.png
@@ -39,8 +55,13 @@ class.Enemies.image=robot_cropped.png
 dependency2.to=Bullet
 target1.width=80
 dependency5.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.y=0
 editor.fx.0.x=0
+=======
+editor.fx.0.y=42
+editor.fx.0.x=529
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
 target2.typeParameters=
 dependency3.to=MyWorld
 target3.showInterface=false
@@ -112,6 +133,10 @@ target4.width=80
 dependency2.from=Enemies
 dependency2.type=UsesDependency
 target5.typeParameters=
+<<<<<<< HEAD
+=======
+class.Rocket.image=rocket.png
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
 world.lastInstantiated=MyWorld
 target2.showInterface=false
 mainWindow.height=631
@@ -121,6 +146,10 @@ target3.name=Enemy2
 target7.height=50
 target6.showInterface=false
 dependency11.type=UsesDependency
+<<<<<<< HEAD
+=======
+class.Explosion.image=explosion_test.png
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
 dependency9.from=MyWorld
 target3.width=80
 project.charset=UTF-8

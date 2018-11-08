@@ -12,13 +12,18 @@ public class MyWorld extends World {
      * Constructor for objects of class MyWorld.
      * 
      */
-    public MyWorld()
-    {    
+    public MyWorld() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
+        
+        // set the order in which goes on top.
+        setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
+        
+        // displays the lives and score upon initialization.
+        displayLivesAndScore();
         addObject(new Bullet(), 400, 300);
-        setPaintOrder(Ship.class, MyWorld.class);
+        setPaintOrder(Ship.class, Enemies.class, MyWorld.class);
         populate();
     }
     
@@ -27,8 +32,16 @@ public class MyWorld extends World {
         shot = arg;
     }
     
-        public void populate()
-    {
+    /**
+     * Scrolls the background to simulate the ship moving through space.
+     */
+    public void scrollBackground() {
+        GreenfootImage background = getBackground();
+        getBackground().drawImage(background, 0, 1);
+        getBackground().drawImage(background, 0, background.getHeight() + 1);
+    }
+    
+    public void populate() {
         //first row
         Enemy1[] enemies1 = new Enemy1[10];
         for ( int i = 0; i <10; i++ ) {
