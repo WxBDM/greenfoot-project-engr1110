@@ -39,10 +39,6 @@ public class Enemies extends Actor
             getWorld().removeObject(b);
             getWorld().removeObject(this);
             score++; //updates score
-            MyWorld.numEnemies--; // updates enemies.
-            if (MyWorld.numEnemies == 0) {
-                Greenfoot.stop();
-            }
         }
     }
     

@@ -40,7 +40,6 @@ public class MyWorld extends World {
         
         // displays the lives and score upon initialization.
         displayLivesAndScore();
-       
     }
     
     public void act() {
@@ -61,8 +60,8 @@ public class MyWorld extends World {
      */
     public void scrollBackground() {
         GreenfootImage background = getBackground();
-        getBackground().drawImage(background, 0, -1);
-        getBackground().drawImage(background, 0, background.getHeight() - 1);
+        getBackground().drawImage(background, 0, 1);
+        getBackground().drawImage(background, 0, background.getHeight() + 1);
     }
     
 }

@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bullet extends Actor
 {
     public Bullet() {
-        GreenfootImage bulletImage = new GreenfootImage("Bullet.png");
+        GreenfootImage bulletImage = new GreenfootImage("bullet_cropped.png");
         bulletImage.scale(bulletImage.getWidth() / 5, bulletImage.getHeight() / 5);
         setImage(bulletImage);
     }
