@@ -40,23 +40,23 @@ public class MyWorld extends World
        Enemy2[] enemies2 = new Enemy2[21];
         for ( int i = 0; i <10; i++ ) {
             enemies2[i] = new Enemy2();
-            addObject(enemies2[i], (i*50)+150, 150);
+            addObject(enemies2[i], (i*50)+150, 125);
         }
         //3rd row
         for ( int i = 11; i <21; i++ ) {
             enemies2[i] = new Enemy2();
-            addObject(enemies2[i], ((i*50)+150), 200);
+            addObject(enemies2[i], ((i*50)-400), 150);
         } 
         //4th row
         Enemy3[] enemies3 = new Enemy3[21];
         for ( int i = 0; i <10; i++ ) {
             enemies3[i] = new Enemy3();
-            addObject(enemies3[i], (i*50)+150, 250);
+            addObject(enemies3[i], (i*50)+150, 175);
         } 
         //final row
         for ( int i = 11; i <21; i++ ) {
             enemies3[i] = new Enemy3();
-            addObject(enemies3[i], ((i*50)+150), 300);
+            addObject(enemies3[i], ((i*50)-400), 200);
         } 
     }
 }

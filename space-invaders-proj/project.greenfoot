@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Nov 06 14:49:02 CST 2018
+#Thu Nov 08 13:54:23 CST 2018
 dependency9.type=UsesDependency
 target4.type=ClassTarget
 dependency3.from=Enemy1
@@ -33,9 +33,9 @@ dependency5.from=Ship
 dependency2.to=Bullet
 target1.width=80
 dependency5.type=UsesDependency
-editor.fx.0.y=101
+editor.fx.0.y=36
 target2.typeParameters=
-editor.fx.0.x=123
+editor.fx.0.x=49
 dependency3.to=MyWorld
 target3.showInterface=false
 target6.name=Ship
@@ -82,8 +82,8 @@ target2.type=ClassTarget
 target2.y=0
 target2.x=0
 class.MyWorld.superclass=greenfoot.World
-mainWindow.y=108
-mainWindow.x=190
+mainWindow.y=134
+mainWindow.x=116
 target6.typeParameters=
 dependency1.from=Bullet
 target5.width=100
