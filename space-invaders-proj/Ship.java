@@ -25,6 +25,7 @@ public class Ship extends Actor
      */
     public void act() {
         checkCollisionEnemy();
+        checkCollisionBullet();
         handleKeyPress();
         shotTimer--;
     } 
@@ -45,7 +46,22 @@ public class Ship extends Actor
             setLocation(400, 550); // resets the location of player
         }
     }
-    
+    /**
+     * Checks collision with an enemy bullet.
+     */
+    public void checkCollisionBullet() {
+        EnemyBullet b = (EnemyBullet) getOneIntersectingObject(EnemyBullet.class);
+        if(b != null) {
+            getWorld().addObject(new Explosion(), getX(), getY());
+            lives--;
+            if (lives == 0) {
+                Greenfoot.setWorld(new MyWorld()); // resets game
+                lives = 3; // resets lives
+                Greenfoot.stop(); // stops the game from looping
+            }
+            setLocation(400, 550); // resets the location of player
+        }
+    }
     /**
      * Returns the number of lives.
      */

@@ -53,13 +53,13 @@ public class Enemies extends Actor
         // Future update: Get the current player location and have bullet head towards
         //  that location.
         
-        int randomNumber = Greenfoot.getRandomNumber(1000);
+        int randomNumber = Greenfoot.getRandomNumber(500);
         
         // Note that the enemies, when shooting, will make themselves dissapear.
         // Therefore, we can either modify the bullet class to see which
         //  actor is shooting, or create a new class specifically for the enemies.
         if (randomNumber == 0) {
-            getWorld().addObject(new Bullet(), getX(), getY() - 50);
+            getWorld().addObject(new EnemyBullet(), getX(), getY() + 50);
             Greenfoot.playSound("shotSound.aiff");
         }
     }

@@ -25,6 +25,7 @@ public class MyWorld extends World {
         // add in ship and bullet. Bullet is located under the ship and will 
         // "respawn" when it is shot. The bullet at all times moves with the ship.
         addObject(new Ship(), 400, 550);
+        //addObject(new EnemyBullet(), 400, 300);
 
         // show the enemies.
         for (int i = 100; i <= (numRows + 1) * 50; i = i + 50){
