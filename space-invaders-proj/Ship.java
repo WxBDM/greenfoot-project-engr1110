@@ -34,7 +34,7 @@ public class Ship extends Actor
      * Checks collsion with an enemy.
      */
     public void checkCollisionEnemy() {
-        Enemies e = (Enemies) getOneIntersectingObject(Enemies.class);
+        Enemy1 e = (Enemy1) getOneIntersectingObject(Enemy1.class);
         if(e != null) {
             getWorld().addObject(new Explosion(), getX(), getY());
             lives--;

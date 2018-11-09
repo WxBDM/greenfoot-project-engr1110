@@ -25,10 +25,12 @@ public class Bullet extends Actor {
        if (getY() == 0) {
            destroy();
         }
+        Actor actor = getOneIntersectingObject(Enemy1.class);
+        getWorld().removeObject(actor);
     }    
     
     private void destroy() {
         ((MyWorld) getWorld()).ShootSet(1);
         getWorld().removeObject(this);
     }
-}  
+}

@@ -12,27 +12,149 @@ public class Enemy1 extends Actor
      * Act - do whatever the Enemies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public int dir = 1; //1 = left 2 = right
-    
-    public int movetimer = 0; //timer value to move at cetain intervals
-    
-    public int shouldMove = 0; //weather or not they should move
-    
-    public int shouldCar = 0;
-    
-    public GreenfootImage img1; //1st animation
-    
-    public GreenfootImage img2; //2nd animation
-    
-    public int shoot; //variable to determine if wea should shoot or not. starting chance is 2%
-    
-    public int chance = 1; //chance to shoot, starts at 2%
+
     public Enemy1() {
         GreenfootImage enemy1Image = new GreenfootImage("enemy1.gif");
     }
-    
     public void act() {
-       
+        move(1);
+        setLocation(getX(), getY());
+        if (getX() == 650) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 125) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 100) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 150) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 651) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 175) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 99) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 200) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 652) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 225) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 98) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 250) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 653) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 275) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 97) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 300) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 654) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 325) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 96) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 350) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 655) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 375) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 95) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 400) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 656) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 425) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 94) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 450) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 657) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 475) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+        if (getX() == 93) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 500) {
+        setLocation(getX(), getY());
+        setRotation(360);
+    }
+        if (getX() == 658) {
+        setLocation(getX(), getY());
+        setRotation(90);
+    }
+        if (getY() == 525) {
+        setLocation(getX(), getY());
+        setRotation(180);
+    }
+       }
     }
 
-}
