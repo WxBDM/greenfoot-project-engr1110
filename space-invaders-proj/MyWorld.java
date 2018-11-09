@@ -16,6 +16,19 @@ public class MyWorld extends World {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
+<<<<<<< HEAD
+        //addObject(new EnemyBullet(), 400, 300);
+
+        // show the enemies.
+        for (int i = 100; i <= (numRows + 1) * 50; i = i + 50){
+            for (int j = 100; j <= (numCols + 1) * 50; j = j + 50) {
+                Actor actor = new Enemies(){};
+                actor.turn(90);
+                addObject(actor, j, i);
+            }
+        }
+=======
+>>>>>>> 8342400af4453e9a224c1b3a08e1972a0d2ad51e
         
         // set the order in which goes on top.
         setPaintOrder(Ship.class, Enemies.class, MyWorld.class);

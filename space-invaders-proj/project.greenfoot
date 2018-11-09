@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Nov 08 19:13:18 CST 2018
+#Thu Nov 08 19:14:57 CST 2018
 editor.fx.0.height=722
 target2.width=80
 target8.name=Ship
@@ -7,7 +7,7 @@ class.Ship.superclass=greenfoot.Actor
 dependency12.type=UsesDependency
 target1.type=ClassTarget
 target7.showInterface=false
-mainWindow.height=631
+mainWindow.height=810
 target6.typeParameters=
 dependency9.to=Bullet
 target1.height=50
