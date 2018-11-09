@@ -63,6 +63,12 @@ public class MyWorld extends World {
         for ( int i = 11; i <21; i++ ) {
             enemies3[i] = new Enemy3();
             addObject(enemies3[i], ((i*50)-400), 200);
-       } 
-   }
+        } 
+    
+    
+    private void displayLivesAndScore() {
+        showText("Lives: " + Ship.getLives(), 60, 20);
+        showText("Score: " + Enemies.getScore(), 60, 40);
+    }
+
 }

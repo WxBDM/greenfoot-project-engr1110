@@ -1,0 +1,40 @@
+#BlueJ class context
+comment0.target=Enemies
+<<<<<<< HEAD
+comment0.text=\n\ The\ enemies\ class\ -\ does\ stuff\ that\ reflects\ enemy\ characteristics\ such\ as\n\ \ movement,\ shooting,\ and\ killing\ player\ upon\ impact.\n\ \n\ @author\ Smells\ Like\ Team\ Spirit\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Enemies()
+comment1.text=\n\ Constructor\ -\ sets\ the\ initial\ enemies\ image.\ MyWorld\ sets\ the\ enemies\ on\ map.\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Enemies\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=
+comment3.target=void\ checkIntersecting()
+comment3.text=\n\ Checks\ for\ any\ intersecting\ bullets.\ If\ the\ bullet\ intersects\ with\ enemy,\n\ \ delete\ the\ enemey\ and\ add\ a\ point.\ The\ bullet\ is\ coming\ from\ player.\n
+comment4.params=
+comment4.target=void\ shoot()
+comment4.text=\n\ Generates\ a\ random\ number\ and\ determines\ whether\ to\ shoot\ or\ not.\n
+comment5.params=
+comment5.target=int\ getScore()
+comment5.text=\n\ Returns\ the\ current\ score\ of\ the\ player.\n
+=======
+comment0.text=\r\n\ The\ enemies\ class\ -\ does\ stuff\ that\ reflects\ enemy\ characteristics\ such\ as\r\n\ \ movement,\ shooting,\ and\ killing\ player\ upon\ impact.\r\n\ \r\n\ @author\ Smells\ Like\ Team\ Spirit\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Enemies()
+comment1.text=\r\n\ Constructor\ -\ sets\ the\ initial\ enemies\ image.\ MyWorld\ sets\ the\ enemies\ on\ map.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Enemies\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ checkIntersecting()
+comment3.text=\r\n\ Checks\ for\ any\ intersecting\ bullets.\ If\ the\ bullet\ intersects\ with\ enemy,\r\n\ \ delete\ the\ enemey\ and\ add\ a\ point.\ The\ bullet\ is\ coming\ from\ player.\r\n
+comment4.params=
+comment4.target=void\ shoot()
+comment4.text=\r\n\ Generates\ a\ random\ number\ and\ determines\ whether\ to\ shoot\ or\ not.\r\n
+comment5.params=
+comment5.target=int\ getScore()
+comment5.text=\r\n\ Returns\ the\ current\ score\ of\ the\ player.\r\n
+>>>>>>> 6c7d17ab66bcc0e2085f29a84e87ff6899f000b6
+comment6.params=
+comment6.target=int\ resetScore()
+numComments=7

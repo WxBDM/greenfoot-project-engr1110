@@ -1,18 +1,32 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Thu Nov 08 20:35:07 CST 2018
 editor.fx.0.height=722
 target2.width=100
+=======
+#Thu Nov 08 19:14:57 CST 2018
+editor.fx.0.height=722
+target2.width=80
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target8.name=Ship
 class.Ship.superclass=greenfoot.Actor
 dependency12.type=UsesDependency
 target1.type=ClassTarget
 target7.showInterface=false
+<<<<<<< HEAD
 mainWindow.height=678
 target6.typeParameters=
 dependency9.to=Enemy1
 target1.height=50
 target8.y=0
 dependency16.type=UsesDependency
+=======
+mainWindow.height=810
+target6.typeParameters=
+dependency9.to=Bullet
+target1.height=50
+target8.y=0
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 class.Bullet.superclass=greenfoot.Actor
 target8.x=0
 dependency2.type=UsesDependency
@@ -21,7 +35,11 @@ target6.y=0
 target6.x=0
 target1.showInterface=false
 target4.y=0
+<<<<<<< HEAD
 dependency10.from=Ship
+=======
+dependency10.from=MyWorld
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target4.x=0
 dependency6.type=UsesDependency
 target9.type=ClassTarget
@@ -30,6 +48,7 @@ target2.y=0
 target2.x=0
 target10.type=ClassTarget
 target8.height=50
+<<<<<<< HEAD
 dependency10.to=Explosion
 dependency14.from=MyWorld
 target10.typeParameters=
@@ -40,24 +59,48 @@ target1.name=Bullet
 target10.showInterface=false
 dependency8.from=Ship
 dependency15.to=Bullet
+=======
+dependency10.to=Enemies
+dependency14.from=MyWorld
+target10.typeParameters=
+dependency4.from=Ship
+dependency5.to=Enemies
+class.MyWorld.superclass=greenfoot.World
+target1.name=Bullet
+target10.showInterface=false
+dependency8.from=MyWorld
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target4.typeParameters=
 target5.name=Enemy2
 class.ScoreBoard.superclass=greenfoot.Actor
 world.lastInstantiated=MyWorld
+<<<<<<< HEAD
 mainWindow.width=954
 readme.width=47
 target9.name=MyWorld
+=======
+mainWindow.width=1241
+readme.width=47
+class.Enemies.image=robot_cropped.png
+class.Rocket.superclass=greenfoot.Actor
+target9.name=Rocket
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target5.height=50
 class.Enemy3.superclass=Enemy1
 target10.name=MyWorld
 dependency13.type=UsesDependency
 target2.type=ClassTarget
+<<<<<<< HEAD
 dependency1.to=MyWorld
 dependency17.type=UsesDependency
+=======
+dependency1.to=Enemies
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 dependency3.type=UsesDependency
 target2.height=50
 target2.typeParameters=
 target6.type=ClassTarget
+<<<<<<< HEAD
 dependency11.to=MyWorld
 target9.typeParameters=
 dependency11.from=Ship
@@ -80,6 +123,30 @@ dependency5.from=Enemy1
 target7.typeParameters=
 target2.name=EnemyBullet
 dependency9.from=Ship
+=======
+dependency11.to=Rocket
+target9.typeParameters=
+dependency11.from=MyWorld
+class.Rocket.image=rocket.png
+dependency7.type=UsesDependency
+version=3.0.0
+editor.fx.0.y=42
+editor.fx.0.x=529
+dependency6.to=Explosion
+target2.showInterface=false
+dependency1.from=Bullet
+class.Enemy2.image=enemy2.gif
+mainWindow.y=23
+class.Enemy3.image=enemy3.gif
+mainWindow.x=101
+target5.showInterface=false
+target8.showInterface=false
+dependency5.from=Ship
+target7.typeParameters=
+class.Explosion.image=explosion_test.png
+target2.name=Explosion
+dependency9.from=MyWorld
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 readme.name=@README
 class.Enemy1.superclass=greenfoot.Actor
 class.Enemy1.image=enemy1.gif
@@ -90,14 +157,22 @@ class.Explosion.superclass=greenfoot.Actor
 editor.fx.0.width=800
 target10.y=0
 target10.x=0
+<<<<<<< HEAD
 dependency2.to=Enemy1
+=======
+dependency2.to=Bullet
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 class.MyWorld.image=space1.jpg
 dependency14.type=UsesDependency
 target9.y=0
 target9.x=0
 target3.type=ClassTarget
 target6.height=50
+<<<<<<< HEAD
 dependency12.to=EnemyBullet
+=======
+dependency12.to=Enemy1
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target7.y=0
 target7.x=0
 target5.y=0
@@ -108,11 +183,16 @@ target10.width=80
 target3.y=0
 target3.x=0
 dependency7.to=MyWorld
+<<<<<<< HEAD
 dependency12.from=Ship
+=======
+dependency12.from=MyWorld
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target3.height=50
 dependency8.type=UsesDependency
 target1.y=0
 target1.x=0
+<<<<<<< HEAD
 target5.typeParameters=
 dependency17.to=Enemy3
 dependency16.from=MyWorld
@@ -138,6 +218,33 @@ target4.type=ClassTarget
 target8.width=80
 dependency8.to=Bullet
 simulation.speed=54
+=======
+class.Bullet.image=bullet.png
+target5.typeParameters=
+class.Ship.image=ship_cropped.png
+<<<<<<<=HEAD
+dependency2.from=Enemies
+class.Enemies.superclass=greenfoot.Actor
+dependency6.from=Ship
+project.charset=UTF-8
+target3.showInterface=false
+target3.name=Enemies
+target6.showInterface=false
+target3.typeParameters=
+target9.showInterface=false
+dependency3.to=MyWorld
+target7.name=ScoreBoard
+dependency11.type=UsesDependency
+package.numDependencies=14
+dependency13.to=Enemy2
+package.numTargets=10
+>>>>>>>=e6c9ba0e8aec4e748da04b0c8dfb87b52733e036
+dependency1.type=UsesDependency
+target4.type=ClassTarget
+target8.width=80
+dependency8.to=Ship
+simulation.speed=61
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target9.width=80
 target7.height=50
 dependency5.type=UsesDependency
@@ -148,19 +255,34 @@ dependency9.type=UsesDependency
 target6.width=80
 target10.height=50
 target7.width=100
+<<<<<<< HEAD
 dependency17.from=MyWorld
 dependency3.from=Enemy1
+=======
+dependency3.from=Enemies
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target1.typeParameters=
 target3.width=80
 target4.width=80
 target8.typeParameters=
+<<<<<<< HEAD
 dependency7.from=Enemy2
 target5.width=80
 dependency4.to=MyWorld
+=======
+dependency7.from=Ship
+target5.width=80
+dependency4.to=Bullet
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
 target4.name=Enemy1
 readme.y=10
 readme.x=10
 target4.height=50
 readme.height=58
 target1.width=80
+<<<<<<< HEAD
 dependency14.to=Enemy1
+=======
+=\=\=\=\=\=\=
+dependency14.to=Enemy3
+>>>>>>> a6081af0dafb6f51316ba4c64533203fbcb5abbf
