@@ -71,4 +71,9 @@ public class MyWorld extends World {
             addObject(enemies3[i], ((i*50)-400), 200);
         } 
     }
+    
+    private void displayLivesAndScore() {
+        showText("Lives: " + Ship.getLives(), 60, 20);
+        showText("Score: " + Enemies.getScore(), 60, 40);
+    }
 }
