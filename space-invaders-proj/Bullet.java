@@ -21,12 +21,11 @@ public class Bullet extends Actor {
        int y = getY();
        y = y-2;
        setLocation(getX(), y);
-       
+       Actor actor = getOneIntersectingObject(Enemy1.class);
+       getWorld().removeObject(actor);
        if (getY() == 0) {
            destroy();
         }
-        Actor actor = getOneIntersectingObject(Enemy1.class);
-        getWorld().removeObject(actor);
     }    
     
     private void destroy() {

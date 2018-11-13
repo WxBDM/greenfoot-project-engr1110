@@ -36,17 +36,17 @@ public class MyWorld extends World {
         getBackground().drawImage(background, 0, background.getHeight() + 1);
     }
     public void populate() {
-        //first row
-        Enemy1[] enemies1 = new Enemy1[10];
-        for ( int i = 0; i <10; i++ ) {
-            enemies1[i] = new Enemy1();
-            addObject(enemies1[i], (i*50)+150, 100);
+       //first row
+       Enemy1[] enemies1 = new Enemy1[10];
+       for ( int i = 0; i <10; i++ ) {
+           enemies1[i] = new Enemy1();
+           addObject(enemies1[i], (i*50)+150, 100);
        }
         //second row
        Enemy2[] enemies2 = new Enemy2[21];
-        for ( int i = 0; i <10; i++ ) {
-            enemies2[i] = new Enemy2();
-            addObject(enemies2[i], (i*50)+150, 125);
+       for ( int i = 0; i <10; i++ ) {
+           enemies2[i] = new Enemy2();
+           addObject(enemies2[i], (i*50)+150, 125);
        }
         //3rd row
         for ( int i = 11; i <21; i++ ) {
@@ -54,21 +54,20 @@ public class MyWorld extends World {
             addObject(enemies2[i], ((i*50)-400), 150);
        } 
         //4th row
-        Enemy3[] enemies3 = new Enemy3[21];
-        for ( int i = 0; i <10; i++ ) {
-            enemies3[i] = new Enemy3();
-            addObject(enemies3[i], (i*50)+150, 175);
+       Enemy3[] enemies3 = new Enemy3[21];
+       for ( int i = 0; i <10; i++ ) {
+           enemies3[i] = new Enemy3();
+           addObject(enemies3[i], (i*50)+150, 175);
        } 
         //final row
-        for ( int i = 11; i <21; i++ ) {
-            enemies3[i] = new Enemy3();
-            addObject(enemies3[i], ((i*50)-400), 200);
-        } 
-    
+       for ( int i = 11; i <21; i++ ) {
+           enemies3[i] = new Enemy3();
+           addObject(enemies3[i], ((i*50)-400), 200);
+       }  
+    }
     
     private void displayLivesAndScore() {
         showText("Lives: " + Ship.getLives(), 60, 20);
-        showText("Score: " + Enemies.getScore(), 60, 40);
     }
 
 }
