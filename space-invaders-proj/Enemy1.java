@@ -16,8 +16,14 @@ public class Enemy1 extends Actor
     public Enemy1() {
         GreenfootImage enemy1Image = new GreenfootImage("enemy1.gif");
     }
+    protected void shootBullet() {
+        if (Greenfoot.getRandomNumber(1000) < 2) {
+            getWorld().addObject(new EnemyBullet(), getX(), getY());
+        }
+    }
     public void act() {
         move(1);
+        shootBullet();
         setLocation(getX(), getY());
         if (getX() == 650) {
         setLocation(getX(), getY());
