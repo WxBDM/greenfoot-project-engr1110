@@ -18,15 +18,13 @@ public class Bullet extends Actor {
      */
     public void act() 
     {
-       int y = getY();
-       y = y-2;
-       setLocation(getX(), y);
+       setLocation(getX(), getY() - 2);
        Actor actor = getOneIntersectingObject(Enemy1.class);
+       if (actor != null || getY() == 0) {
        getWorld().removeObject(actor);
-       if (getY() == 0) {
-           destroy();
-        }
+       getWorld().removeObject(this);
     }    
+}
     
     private void destroy() {
         ((MyWorld) getWorld()).ShootSet(1);
