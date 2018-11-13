@@ -13,61 +13,58 @@ public class MyWorld extends World {
      * Constructor for objects of class MyWorld.
      * 
      */
-    public MyWorld() {    
+   public MyWorld() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
-        //displayLivesAndScore();
+        displayLivesAndScore();
         setPaintOrder(Ship.class, Enemy1.class, MyWorld.class);
         populate();
    }
-       public void act() {
-           
+   
+   public void act() {}
+   
+   public void ShootSet(int arg) {
+       shot = arg;
    }
-      public void ShootSet(int arg) {
-        shot = arg;
-   }
-   /**
+   
+    /**
      * Scrolls the background to simulate the ship moving through space.
      */
-    public void scrollBackground() {
-        GreenfootImage background = getBackground();
-        getBackground().drawImage(background, 0, 1);
-        getBackground().drawImage(background, 0, background.getHeight() + 1);
-    }
-    public void populate() {
-       //first row
-       Enemy1[] enemies1 = new Enemy1[10];
-       for ( int i = 0; i <10; i++ ) {
-           enemies1[i] = new Enemy1();
-           addObject(enemies1[i], (i*50)+150, 100);
-       }
-        //second row
-       Enemy2[] enemies2 = new Enemy2[21];
-       for ( int i = 0; i <10; i++ ) {
-           enemies2[i] = new Enemy2();
-           addObject(enemies2[i], (i*50)+150, 125);
-       }
-        //3rd row
-        for ( int i = 11; i <21; i++ ) {
-            enemies2[i] = new Enemy2();
-            addObject(enemies2[i], ((i*50)-400), 150);
-       } 
-        //4th row
-       Enemy3[] enemies3 = new Enemy3[21];
-       for ( int i = 0; i <10; i++ ) {
-           enemies3[i] = new Enemy3();
-           addObject(enemies3[i], (i*50)+150, 175);
-       } 
-        //final row
-       for ( int i = 11; i <21; i++ ) {
-           enemies3[i] = new Enemy3();
-           addObject(enemies3[i], ((i*50)-400), 200);
-       }  
-    }
+   public void scrollBackground() {
+       GreenfootImage background = getBackground();
+       getBackground().drawImage(background, 0, 1);
+       getBackground().drawImage(background, 0, background.getHeight() + 1);
+   }
     
-    private void displayLivesAndScore() {
-        showText("Lives: " + Ship.getLives(), 60, 20);
-    }
-
+   /**
+    * Populates the world with the enemies.
+    */
+   public void populate() {
+      int colSpace = 100; // set initial y coordinate
+      for (int row = 0; row < 5; row++) { // iterate through the rows
+          for (int col = 0; col < 10; col++) { // iterate through the columns
+              int xCoord = (col * 50) + 150; // determines x coordinate
+              if (row == 0) {
+                  addObject(new Enemy1(), xCoord, colSpace);
+              } else if (row == 1) {
+                  addObject(new Enemy2(), xCoord, colSpace);
+              } else if (row == 2) {
+                  addObject(new Enemy2(), xCoord, colSpace);
+              } else if (row == 3) {
+                  addObject(new Enemy3(), xCoord, colSpace);
+              } else {
+                  addObject(new Enemy3(), xCoord, colSpace);
+              }
+          }
+          colSpace = colSpace + 25; // updates y coordinate
+      }
+   }
+    
+   /**
+    * Displays the lives and the score upon start.
+    */
+   private void displayLivesAndScore() {
+       showText("Lives: " + Ship.getLives(), 60, 20);
+   }
 }

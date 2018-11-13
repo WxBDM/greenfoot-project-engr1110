@@ -7,6 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Bullet extends Actor {
+    int bullet_cooldown = 0;
+    
     public Bullet() {
         GreenfootImage bulletImage = new GreenfootImage("bullet_cropped.png");
         bulletImage.scale(bulletImage.getWidth() / 5, bulletImage.getHeight() / 5);
@@ -18,14 +20,18 @@ public class Bullet extends Actor {
      */
     public void act() 
     {
-       int y = getY();
-       y = y-2;
-       setLocation(getX(), y);
-       Actor actor = getOneIntersectingObject(Enemy1.class);
-       getWorld().removeObject(actor);
-       if (getY() == 0) {
-           destroy();
-        }
+       if (bullet_cooldown <= 5) {
+           int y = getY();
+           y = y-2;
+           setLocation(getX(), y);
+           Actor actor = getOneIntersectingObject(Enemy1.class);
+           getWorld().removeObject(actor);
+           if (getY() == 0) {
+               destroy();
+            }
+       } else {
+           bullet_cooldown++;
+       }
     }    
     
     private void destroy() {
