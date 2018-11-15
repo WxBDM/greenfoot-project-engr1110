@@ -1,20 +1,20 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=MyWorld()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=arg
 comment3.target=void\ ShootSet(int)
 comment4.params=
 comment4.target=void\ scrollBackground()
-comment4.text=\n\ Scrolls\ the\ background\ to\ simulate\ the\ ship\ moving\ through\ space.\n
+comment4.text=\r\n\ Scrolls\ the\ background\ to\ simulate\ the\ ship\ moving\ through\ space.\r\n
 comment5.params=
 comment5.target=void\ populate()
-comment5.text=\n\ Populates\ the\ world\ with\ the\ enemies.\n
+comment5.text=\r\n\ Populates\ the\ world\ with\ the\ enemies.\r\n
 comment6.params=
 comment6.target=void\ displayLivesAndScore()
-comment6.text=\n\ Displays\ the\ lives\ and\ the\ score\ upon\ start.\n
+comment6.text=\r\n\ Displays\ the\ lives\ and\ the\ score\ upon\ start.\r\n
 numComments=7

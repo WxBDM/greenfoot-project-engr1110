@@ -56,6 +56,7 @@ public class Ship extends Actor
         EnemyBullet b = (EnemyBullet) getOneIntersectingObject(EnemyBullet.class);
         if(b != null) {
             getWorld().addObject(new Explosion(), getX(), getY());
+            getWorld().removeObject(b);
             lives--;
             if (lives == 0) {
                 Greenfoot.setWorld(new MyWorld()); // resets game
@@ -89,7 +90,7 @@ public class Ship extends Actor
      */
     private void checkLeftArrow() {
          if (Greenfoot.isKeyDown("Left")) {
-             move(-4);
+             move(-2);
          }
     }
     
@@ -98,7 +99,7 @@ public class Ship extends Actor
      */
     private void checkRightArrow() {
         if (Greenfoot.isKeyDown("Right")) {
-            move(4);
+            move(2);
         }
     }
     
@@ -118,7 +119,7 @@ public class Ship extends Actor
         if (shotTimer > 100) {
             getWorld().addObject(new Bullet(), getX(), getY() - 50);
             Greenfoot.playSound("shotSound.aiff");
-            shotTimer = 0;
+            shotTimer = 50;
         }
     }
 }

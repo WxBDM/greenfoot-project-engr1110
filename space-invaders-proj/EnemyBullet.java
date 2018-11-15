@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class EnemyBullet extends Actor
 {
     public EnemyBullet() {
-        GreenfootImage bulletImage = new GreenfootImage("Bullet.png");
+        GreenfootImage bulletImage = new GreenfootImage("bullet_cropped.png");
         bulletImage.scale(bulletImage.getWidth() / 5, bulletImage.getHeight() / 5);
         setImage(bulletImage);
     }
@@ -19,7 +19,7 @@ public class EnemyBullet extends Actor
      */
     public void act() 
     {
-        setLocation(getX(), getY() + 5);
+        setLocation(getX(), getY() + 2);
         if (getY() > 595) {
             getWorld().removeObject(this);
         }

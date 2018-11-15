@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Nov 15 12:43:01 CST 2018
+#Thu Nov 15 14:14:57 CST 2018
 editor.fx.0.height=722
 target2.width=100
 target8.name=Ship
@@ -66,8 +66,8 @@ dependency11.from=MyWorld
 class.Rocket.image=rocket.png
 dependency7.type=UsesDependency
 version=3.0.0
-editor.fx.0.y=76
-editor.fx.0.x=654
+editor.fx.0.y=58
+editor.fx.0.x=291
 dependency15.from=MyWorld
 dependency6.to=Enemy1
 target2.showInterface=false
@@ -145,7 +145,7 @@ dependency1.type=UsesDependency
 target4.type=ClassTarget
 target8.width=80
 dependency8.to=Enemy2
-simulation.speed=61
+simulation.speed=55
 target9.width=80
 target7.height=50
 dependency5.type=UsesDependency
