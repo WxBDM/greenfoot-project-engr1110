@@ -25,8 +25,7 @@ public class Ship extends Actor
      * Act method.
      */
     public void act() {
-        checkCollisionEnemy();
-        checkCollisionBullet();
+        checkAllCollisions();
         handleKeyPress();
         shotTimer++;
     } 
@@ -34,9 +33,12 @@ public class Ship extends Actor
     /**
      * Checks collsion with an enemy.
      */
-    public void checkCollisionEnemy() {
-        Enemy1 e = (Enemy1) getOneIntersectingObject(Enemy1.class);
-        if(e != null) {
+    public void checkAllCollisions() {
+        Enemy1 eOne = (Enemy1) getOneIntersectingObject(Enemy1.class);
+        Enemy2 eTwo = (Enemy2) getOneIntersectingObject(Enemy2.class);
+        Enemy3 eThree = (Enemy3) getOneIntersectingObject(Enemy3.class);
+        EnemyBullet b = (EnemyBullet) getOneIntersectingObject(EnemyBullet.class);
+        if(eOne != null || eTwo != null || eThree != null || b != null) {
             getWorld().addObject(new Explosion(), getX(), getY());
             lives--;
             if (lives == 0) {
