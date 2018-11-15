@@ -10,6 +10,7 @@ public class Ship extends Actor
 {
     public static int lives = 3; // number of lives.
     public int shotTimer = 25; // cooldown for shots fired.
+    public static int score = 0;
     
     /**
      * Constructor
@@ -27,7 +28,7 @@ public class Ship extends Actor
         checkCollisionEnemy();
         checkCollisionBullet();
         handleKeyPress();
-        shotTimer--;
+        shotTimer++;
     } 
     
     /**
@@ -70,6 +71,10 @@ public class Ship extends Actor
         return lives;
     }
     
+    public static int getScore() {
+        return score;
+    }
+    
     /**
      * Checks to see if any of the buttons are pressed - space, right or left.
      */
@@ -109,7 +114,7 @@ public class Ship extends Actor
      * This method shoots the bullet.
      */
     private void shootBullet() {
-        if (shotTimer < 0) {
+        if (shotTimer > 100) {
             getWorld().addObject(new Bullet(), getX(), getY() - 50);
             Greenfoot.playSound("shotSound.aiff");
             shotTimer = 50;
