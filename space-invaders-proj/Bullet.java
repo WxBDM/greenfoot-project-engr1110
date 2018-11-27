@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Bullet extends Actor {
-    //int bullet_cooldown = 0;
+    int  bullet_cooldown = 0;
     
     public Bullet() {
         GreenfootImage bulletImage = new GreenfootImage("bullet_cropped.png");
@@ -20,31 +20,46 @@ public class Bullet extends Actor {
      */
     public void act() 
     {
-//<<<<<<< HEAD
        setLocation(getX(), getY() - 2);
-       Actor actor = getOneIntersectingObject(Enemy1.class);
-       if (actor != null || getY() == 0) {
-       getWorld().removeObject(actor);
+       Actor Enemy1 = getOneIntersectingObject(Enemy1.class);
+       if (Enemy1!= null || getY() == 0) 
+       {
+       World myWorld = getWorld();
+       myWorld. removeObject(Enemy1);
+       MyWorld MyWorld= (MyWorld)myWorld;
+       Counter counter = MyWorld.getCounter(); 
+       counter.addScore();
+       getWorld().removeObject(Enemy1);
        getWorld().removeObject(this);
-/* =======
-       if (bullet_cooldown <= 5) {
+       return; 
+    }
+
+       if (bullet_cooldown <= 5) 
+       {
            int y = getY();
            y = y-2;
            setLocation(getX(), y);
            Actor actor = getOneIntersectingObject(Enemy1.class);
            getWorld().removeObject(actor);
-           if (getY() == 0) {
+           return;
+        }
+          if (getY() == 0) 
+          {
                destroy();
             }
-       } else {
+            
+        else; 
+        {
            bullet_cooldown++;
        }
->>>>>>> b367d848dc913bc6379bc8ccfad4428c6c5cb73c */
+
     }    
-}
+
     
     private void destroy() {
         ((MyWorld) getWorld()).ShootSet(1);
         getWorld().removeObject(this);
-    }
+        }
+    
+    
 }
