@@ -23,5 +23,5 @@ public class EnemyBullet extends Actor
         if (getY() > 595) {
             getWorld().removeObject(this);
         }
+    }
     }      
-}

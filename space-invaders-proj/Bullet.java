@@ -20,26 +20,12 @@ public class Bullet extends Actor {
      */
     public void act() 
     {
-//<<<<<<< HEAD
+
        setLocation(getX(), getY() - 2);
        Actor actor = getOneIntersectingObject(Enemy1.class);
        if (actor != null || getY() == 0) {
        getWorld().removeObject(actor);
        getWorld().removeObject(this);
-/* =======
-       if (bullet_cooldown <= 5) {
-           int y = getY();
-           y = y-2;
-           setLocation(getX(), y);
-           Actor actor = getOneIntersectingObject(Enemy1.class);
-           getWorld().removeObject(actor);
-           if (getY() == 0) {
-               destroy();
-            }
-       } else {
-           bullet_cooldown++;
-       }
->>>>>>> b367d848dc913bc6379bc8ccfad4428c6c5cb73c */
     }    
 }
     

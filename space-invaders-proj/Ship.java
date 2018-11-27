@@ -11,7 +11,7 @@ public class Ship extends Actor
     public static int lives = 3; // number of lives.
     public int shotTimer = 25; // cooldown for shots fired.
     public static int score = 0;
-    
+    GameOver GameOver = new GameOver();
     /**
      * Constructor
      */
@@ -28,6 +28,7 @@ public class Ship extends Actor
         checkAllCollisions();
         handleKeyPress();
         shotTimer++;
+        checkLives();
     } 
     
     /**
@@ -43,8 +44,8 @@ public class Ship extends Actor
             lives--;
             if (lives == 0) {
                 Greenfoot.setWorld(new MyWorld()); // resets game
-                lives = 3; // resets lives
-                Greenfoot.stop(); // stops the game from looping
+                lives = 3; // resets lives //adds the game over screen in the middle of the world;
+                Greenfoot.stop();
             }
             setLocation(400, 550); // resets the location of player
         }
@@ -120,6 +121,12 @@ public class Ship extends Actor
             getWorld().addObject(new Bullet(), getX(), getY() - 50);
             Greenfoot.playSound("shotSound.aiff");
             shotTimer = 50;
+        }
+    }
+    
+    public void checkLives() {
+        if (lives == 1) {
+            this.getWorld().addObject(GameOver, 400, 300);
         }
     }
 }

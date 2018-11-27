@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MyWorld extends World {
    public int shot = 1;
+   GameOver GameOver = new GameOver();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -17,12 +18,14 @@ public class MyWorld extends World {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
-        displayLivesAndScore();
         setPaintOrder(Ship.class, Enemy1.class, MyWorld.class);
         populate();
    }
    
-   public void act() {}
+   public void act() {
+      displayLivesAndScore();
+      addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
+    }
    
    public void ShootSet(int arg) {
        shot = arg;
@@ -67,4 +70,8 @@ public class MyWorld extends World {
    private void displayLivesAndScore() {
        showText("Lives: " + Ship.getLives(), 60, 20);
    }
+   
+   public GameOver getGameOver() {
+       return GameOver;
+    }
 }

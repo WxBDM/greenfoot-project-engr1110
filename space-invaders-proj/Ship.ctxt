@@ -1,41 +1,38 @@
 #BlueJ class context
 comment0.target=Ship
-comment0.text=\r\n\ The\ ship\ class.\ This\ is\ the\ player.\r\n\ \r\n\ @author\ Smells\ like\ Team\ Spirit\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ The\ ship\ class.\ This\ is\ the\ player.\n\ \n\ @author\ Smells\ like\ Team\ Spirit\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Ship()
-comment1.text=\r\n\ Constructor\r\n
+comment1.text=\n\ Constructor\n
 comment10.params=
 comment10.target=void\ checkSpaceBar()
-comment10.text=\r\n\ checks\ to\ see\ if\ user\ pressed\ the\ space\ bar.\ If\ so,\ shoot\ the\ bullet.\r\n
+comment10.text=\n\ checks\ to\ see\ if\ user\ pressed\ the\ space\ bar.\ If\ so,\ shoot\ the\ bullet.\n
 comment11.params=
 comment11.target=void\ shootBullet()
-comment11.text=\r\n\ This\ method\ shoots\ the\ bullet.\r\n
+comment11.text=\n\ This\ method\ shoots\ the\ bullet.\n
+comment12.params=
+comment12.target=void\ checkLives()
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ method.\r\n
+comment2.text=\n\ Act\ method.\n
 comment3.params=
-<<<<<<< HEAD
 comment3.target=void\ checkAllCollisions()
 comment3.text=\n\ Checks\ collsion\ with\ an\ enemy.\n
-=======
-comment3.target=void\ checkCollisionEnemy()
-comment3.text=\r\n\ Checks\ collsion\ with\ an\ enemy.\r\n
->>>>>>> 317f938e7a405e40f7018bcc8546c1c54a6d0682
 comment4.params=
 comment4.target=void\ checkCollisionBullet()
-comment4.text=\r\n\ Checks\ collision\ with\ an\ enemy\ bullet.\r\n
+comment4.text=\n\ Checks\ collision\ with\ an\ enemy\ bullet.\n
 comment5.params=
 comment5.target=int\ getLives()
-comment5.text=\r\n\ Returns\ the\ number\ of\ lives.\r\n
+comment5.text=\n\ Returns\ the\ number\ of\ lives.\n
 comment6.params=
 comment6.target=int\ getScore()
 comment7.params=
 comment7.target=void\ handleKeyPress()
-comment7.text=\r\n\ Checks\ to\ see\ if\ any\ of\ the\ buttons\ are\ pressed\ -\ space,\ right\ or\ left.\r\n
+comment7.text=\n\ Checks\ to\ see\ if\ any\ of\ the\ buttons\ are\ pressed\ -\ space,\ right\ or\ left.\n
 comment8.params=
 comment8.target=void\ checkLeftArrow()
-comment8.text=\r\n\ Checks\ to\ see\ if\ the\ player\ pressed\ the\ left\ key.\ If\ so,\ move\ 4\ units\ left.\r\n
+comment8.text=\n\ Checks\ to\ see\ if\ the\ player\ pressed\ the\ left\ key.\ If\ so,\ move\ 4\ units\ left.\n
 comment9.params=
 comment9.target=void\ checkRightArrow()
-comment9.text=\r\n\ Checks\ to\ see\ if\ player\ pressed\ ther\ right\ key.\ If\ so,\ move\ 4\ units\ right.\r\n
-numComments=12
+comment9.text=\n\ Checks\ to\ see\ if\ player\ pressed\ ther\ right\ key.\ If\ so,\ move\ 4\ units\ right.\n
+numComments=13
