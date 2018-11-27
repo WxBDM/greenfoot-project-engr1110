@@ -7,9 +7,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
+<<<<<<< HEAD
+public class MyWorld extends World
+{
+    Counter counter = new Counter();
+    public int shot = 1;
+=======
 public class MyWorld extends World {
    public int shot = 1;
    GameOver GameOver = new GameOver();
+>>>>>>> 30d22f564f6813591ea57983859b6c61f334b0a2
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -27,7 +34,12 @@ public class MyWorld extends World {
       addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
     }
    
-   public void ShootSet(int arg) {
+   public Counter getCounter()
+   {
+      return counter;  
+    }
+    
+    public void ShootSet(int arg) {
        shot = arg;
    }
    
@@ -39,6 +51,7 @@ public class MyWorld extends World {
        getBackground().drawImage(background, 0, 1);
        getBackground().drawImage(background, 0, background.getHeight() + 1);
    }
+   
     
    /**
     * Populates the world with the enemies.
@@ -69,6 +82,7 @@ public class MyWorld extends World {
     */
    private void displayLivesAndScore() {
        showText("Lives: " + Ship.getLives(), 60, 20);
+       addObject(counter, 60, 50); 
    }
    
    public GameOver getGameOver() {
