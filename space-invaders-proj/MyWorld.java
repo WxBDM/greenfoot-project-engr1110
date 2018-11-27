@@ -7,10 +7,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
+<<<<<<< HEAD
 public class MyWorld extends World
 {
     Counter counter = new Counter();
     public int shot = 1;
+=======
+public class MyWorld extends World {
+   public int shot = 1;
+   GameOver GameOver = new GameOver();
+>>>>>>> 30d22f564f6813591ea57983859b6c61f334b0a2
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,12 +25,14 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
-        displayLivesAndScore();
         setPaintOrder(Ship.class, Enemy1.class, MyWorld.class);
         populate();
    }
    
-   public void act() {}
+   public void act() {
+      displayLivesAndScore();
+      addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
+    }
    
    public Counter getCounter()
    {
@@ -76,4 +84,8 @@ public class MyWorld extends World
        showText("Lives: " + Ship.getLives(), 60, 20);
        addObject(counter, 60, 50); 
    }
+   
+   public GameOver getGameOver() {
+       return GameOver;
+    }
 }
