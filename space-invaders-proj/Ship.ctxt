@@ -17,7 +17,11 @@ comment2.target=void\ act()
 comment2.text=\n\ Act\ method.\n
 comment3.params=
 comment3.target=void\ checkAllCollisions()
+<<<<<<< HEAD
+comment3.text=\r\n\ Checks\ collsion\ with\ an\ enemy.\r\n
+=======
 comment3.text=\n\ Checks\ collsion\ with\ an\ enemy.\n
+>>>>>>> 30d22f564f6813591ea57983859b6c61f334b0a2
 comment4.params=
 comment4.target=void\ checkCollisionBullet()
 comment4.text=\n\ Checks\ collision\ with\ an\ enemy\ bullet.\n
