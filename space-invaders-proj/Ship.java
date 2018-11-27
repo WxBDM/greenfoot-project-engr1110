@@ -125,7 +125,7 @@ public class Ship extends Actor
     }
     
     public void checkLives() {
-        if (lives == 1) {
+        if (lives == 0) {
             this.getWorld().addObject(GameOver, 400, 300);
         }
     }
