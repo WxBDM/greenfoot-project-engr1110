@@ -31,8 +31,8 @@ public class MyWorld extends World {
       // dontRepopulateALot is the "failsafe" from populating multiple times.
       // without this variable, we would have MULTIPLE enemies stacked together, thus
       // slowing down the program and getting an out of memory error eventually.
-      if (Ship.getScore() % 50 == 0 && Ship.getScore() != 0) {
-          if (dontRepopulateALot == 0 && Ship.getScore() % 50 == 0) {
+      if (Ship.getScore() % 51 == 0 && Ship.getScore() != 0) {
+          if (dontRepopulateALot == 0 && Ship.getScore() % 51 == 0) {
               populate();
               dontRepopulateALot++;
           }
