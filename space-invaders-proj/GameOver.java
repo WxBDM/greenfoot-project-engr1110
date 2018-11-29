@@ -14,10 +14,11 @@ public class GameOver extends Actor
      */
     public void act() 
     {
-        this.getWorld().removeObject(this);
+        if (Ship.getLives() != 0) {
+            this.getWorld().removeObject(this);
+        }
     } 
-    public GameOver()
-    {
-            setImage(new GreenfootImage("Game Over", 48, Color.RED, Color.BLACK));
+    public GameOver(){ 
+        setImage(new GreenfootImage("Game Over", 48, Color.RED, Color.BLACK));
     }
 }

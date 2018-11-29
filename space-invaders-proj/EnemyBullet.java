@@ -10,8 +10,9 @@ public class EnemyBullet extends Actor
 {
     public EnemyBullet() {
         GreenfootImage bulletImage = new GreenfootImage("bullet_cropped.png");
-        bulletImage.scale(bulletImage.getWidth() / 5, bulletImage.getHeight() / 5);
+        bulletImage.scale(bulletImage.getWidth() / 7, bulletImage.getHeight() / 5);
         setImage(bulletImage);
+        getImage().rotate(180);
     }
     /**
      * Act - do whatever the EnemyBullet wants to do. This method is called whenever
@@ -24,4 +25,4 @@ public class EnemyBullet extends Actor
             getWorld().removeObject(this);
         }
     }
-    }      
+}      

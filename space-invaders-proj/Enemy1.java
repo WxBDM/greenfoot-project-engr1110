@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy1 extends Actor
 {
+    public static int moveDistance;
     /**
      * Act - do whatever the Enemies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,7 +17,7 @@ public class Enemy1 extends Actor
     public Enemy1() {
         GreenfootImage enemy1Image = new GreenfootImage("enemy1.gif");
     }
-    protected void shootBullet() {
+    public void shootBullet() {
         if (Greenfoot.getRandomNumber(1000) < 2) {
             getWorld().addObject(new EnemyBullet(), getX(), getY());
         }

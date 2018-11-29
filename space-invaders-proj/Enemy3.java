@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy3 extends Enemy1
 {
+    public static int moveDistance;
     /**
      * Act - do whatever the Enemy3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

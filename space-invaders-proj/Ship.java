@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ship extends Actor
 {
-    public static int lives = 3; // number of lives.
+    public static int lives; // number of lives.
     public int shotTimer = 25; // cooldown for shots fired.
-    public static int score = 0;
+    public static int score;
     GameOver GameOver = new GameOver();
     /**
      * Constructor
@@ -19,6 +19,8 @@ public class Ship extends Actor
         GreenfootImage shipImage = new GreenfootImage("ship_cropped.png");
         shipImage.scale(shipImage.getWidth() / 8, shipImage.getHeight() / 8);
         setImage(shipImage);
+        lives = 3;
+        score = 1;
     }
     
     /**
@@ -32,46 +34,43 @@ public class Ship extends Actor
     } 
     
     /**
-     * Checks collsion with an enemy.
+     * Checks collsion with an enemy and bullet.
+     * If colliding with bullet, decrement lives. if it's zero, display "game over".
+     * If colliding with enemy, display "game over".
      */
     public void checkAllCollisions() {
         Enemy1 eOne = (Enemy1) getOneIntersectingObject(Enemy1.class);
         Enemy2 eTwo = (Enemy2) getOneIntersectingObject(Enemy2.class);
         Enemy3 eThree = (Enemy3) getOneIntersectingObject(Enemy3.class);
         EnemyBullet b = (EnemyBullet) getOneIntersectingObject(EnemyBullet.class);
-        if(eOne != null || eTwo != null || eThree != null || b != null) {
+        
+        // if colliding with bullet, don't end the game.
+        if (b != null) {
             getWorld().addObject(new Explosion(), getX(), getY());
             lives--;
-            if (lives == 0) {
-                Greenfoot.setWorld(new MyWorld()); // resets game
-                lives = 3; // resets lives //adds the game over screen in the middle of the world;
-                Greenfoot.stop();
-            }
-            setLocation(400, 550); // resets the location of player
+            getWorld().removeObject(b); // removes enemy bullet
         }
-    }
-    /**
-     * Checks collision with an enemy bullet.
-     */
-    public void checkCollisionBullet() {
-        EnemyBullet b = (EnemyBullet) getOneIntersectingObject(EnemyBullet.class);
-        if(b != null) {
+        
+        if(eOne != null || eTwo != null || eThree != null) {
             getWorld().addObject(new Explosion(), getX(), getY());
-            getWorld().removeObject(b);
-            lives--;
-            if (lives == 0) {
-                Greenfoot.setWorld(new MyWorld()); // resets game
-                lives = 3; // resets lives
-                Greenfoot.stop(); // stops the game from looping
-            }
-            setLocation(400, 550); // resets the location of player
+            lives = 0;
+            checkLives();
         }
     }
+
     /**
      * Returns the number of lives.
      */
     public static int getLives() {
         return lives;
+    }
+    
+    public static int getScoreMinusOne() {
+        return score - 1;
+    }
+    
+    public static void updateScore() {
+        score++;
     }
     
     public static int getScore() {
@@ -127,6 +126,7 @@ public class Ship extends Actor
     public void checkLives() {
         if (lives == 0) {
             this.getWorld().addObject(GameOver, 400, 300);
+            getWorld().removeObject(this);
         }
     }
 }

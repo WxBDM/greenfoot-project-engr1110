@@ -7,16 +7,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-<<<<<<< HEAD
-public class MyWorld extends World
-{
-    Counter counter = new Counter();
-    public int shot = 1;
-=======
 public class MyWorld extends World {
-   public int shot = 1;
    GameOver GameOver = new GameOver();
->>>>>>> 30d22f564f6813591ea57983859b6c61f334b0a2
+   private int dontRepopulateALot = 0;
+   
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,34 +19,29 @@ public class MyWorld extends World {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
         addObject(new Ship(), 400, 550);
-        setPaintOrder(Ship.class, Enemy1.class, MyWorld.class);
+        setPaintOrder(GameOver.class, Explosion.class, Ship.class, Enemy1.class, MyWorld.class);
         populate();
+        displayLivesAndScore();
    }
    
    public void act() {
       displayLivesAndScore();
       addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
+      
+      // dontRepopulateALot is the "failsafe" from populating multiple times.
+      // without this variable, we would have MULTIPLE enemies stacked together, thus
+      // slowing down the program and getting an out of memory error eventually.
+      if (Ship.getScore() % 50 == 0 && Ship.getScore() != 0) {
+          if (dontRepopulateALot == 0 && Ship.getScore() % 50 == 0) {
+              populate();
+              dontRepopulateALot++;
+          }
+      } else {
+          dontRepopulateALot = 0;
+      }
+      
     }
    
-   public Counter getCounter()
-   {
-      return counter;  
-    }
-    
-    public void ShootSet(int arg) {
-       shot = arg;
-   }
-   
-    /**
-     * Scrolls the background to simulate the ship moving through space.
-     */
-   public void scrollBackground() {
-       GreenfootImage background = getBackground();
-       getBackground().drawImage(background, 0, 1);
-       getBackground().drawImage(background, 0, background.getHeight() + 1);
-   }
-   
-    
    /**
     * Populates the world with the enemies.
     */
@@ -82,7 +71,7 @@ public class MyWorld extends World {
     */
    private void displayLivesAndScore() {
        showText("Lives: " + Ship.getLives(), 60, 20);
-       addObject(counter, 60, 50); 
+       showText("Score: " + Ship.getScoreMinusOne(), 60, 50); 
    }
    
    public GameOver getGameOver() {
