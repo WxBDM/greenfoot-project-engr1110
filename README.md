@@ -1,7 +1,7 @@
 # ENGR 1110 Group Project
 
 <h2>Overview</h2>
-This project uses Greenfoot, an IDE using Java to develop two-dimensional graphical applications.
+This project uses Greenfoot, an IDE using Java to develop two-dimensional graphical applications. This project takes a small twist on the classic game Space Invaders.
 <h4>Class Overview</h4>
 
 Semester: Fall 2018   
